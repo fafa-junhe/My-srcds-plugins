@@ -1,0 +1,15 @@
+
+# This file specifies server-script configuration for this project
+# If you cannot see secrets.cson in Atom, click on the treeview and press the letter i
+
+server:
+  location: '47.106.238.75'
+  projectRoot: '/home/hlserver/tf2/tf/addons/sourcemod/scripting/'
+  # login info is kept in secrets.cson
+
+options:
+  syncChangedFiles: yes
+  scriptOnRun:  'build.sh'
+  scriptOnSave: 'setup.sh'
+  useGitignore: yes
+  logToConsole: yes
