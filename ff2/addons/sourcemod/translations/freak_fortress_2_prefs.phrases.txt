@@ -1,0 +1,452 @@
+"Phrases"
+{
+	"rps_lost"
+	{	
+		"#format"	"{1:i},{2:N}"
+		"en"		"You lost {1} queue points to {2}!"
+		"ru"		"Ты потерял {1} очков очереди, отдав их игроку {2}!"
+	}
+	"rps_won"
+	{	
+		"#format"	"{1:i},{2:N}"
+		"en"		"You won {1} queue points from {2}!"
+		"ru"		"Ты выиграл {1} очков очереди у игрока {2}!"
+	}
+	"ff2boss_enabled"
+	{
+		"en"		"Bosses: Enabled"
+		"ru"		"Боссы: включены"
+	}
+	"ff2boss_disabled"
+	{
+		"en"		"Bosses: Disabled"
+		"ru"		"Боссы: отключены"
+	}
+	"ff2comp_enabled"
+	{
+		"en"		"Companion bosses: Enabled"
+		"ru"		"Компаньоны боссов: включены"
+	}
+	"ff2comp_disabled"
+	{
+		"en"		"Companion bosses: Disabled"
+		"ru"		"Компаньоны боссов: отключены"
+	}
+	"ff2_boss_selection"
+	{
+		"#format"	"{1:s}"
+		"en"		"Freak Fortress 2 Boss Selection:\nSet your preferences here!\n\nYou can also do /ff2boss <bossname> to select a boss!\n \nCurrent selection: {1}"
+		"ru"		"Выбор босса Freak Fortress 2:\nУстанавливайте ваши настройки здесь!\n\nВы также можете ввести /ff2boss <имя босса>, чтобы выбрать босса!\n\nТекущий выбор: {1}"
+	}
+	"boss_selection_overridden"
+	{
+		"en"		"An admin overrode your boss selection!"
+		"ru"		"Администратор переопределил твой выбор босса!"
+	}
+	"boss_selection_reset"
+	{
+		"en"		"Your boss selection has been reset!"
+		"ru"		"Ваш выбор босса был сброшен!"
+	}
+	"to0_random"
+	{
+		"en"		"Random Boss"
+		"ru"		"Случайный босс"
+	}
+	"to0_resetpts"
+	{
+		"en"		"Skip a turn"
+		"ru"		"Пропустить очередь"
+	}
+	"to0_disablepts"
+	{
+		"en"		"Disable Bosses"
+		"ru"		"Отключить боссов"
+	}
+	"to0_enablepts"
+	{
+		"en"		"Enable Bosses"
+		"ru"		"Включить боссов"
+	}
+	"to0_disableduo"
+	{
+		"en"		"Disable Companions"
+		"ru"		"Отключить компаньонов"
+	}
+	"to0_enableduo"
+	{
+		"en"		"Enable Companions"
+		"ru"		"Включить компаньонов"
+	}
+	"to0_disablekstreak"
+	{
+		"en"		"Disable Killstreaks"
+		"ru"		"Выключить серии убийств"
+	}
+	"to0_enablekstreak"
+	{
+		"en"		"Enable Killstreaks"
+		"ru"		"Включить серии убийств"
+	}
+	"to0_togglekstreak"
+	{
+		"en"		"Toggle Killstreaks"
+		"ru"		"Переключить серии убийств"
+	}
+	"to0_difficulty"
+	{
+		"en"		"Change Difficulty"
+		"ru"		"Выбрать сложность"
+	}
+	"to0_confirm"
+	{
+		"#format"	"{1:s}"
+		"en"		"Select {1}"
+		"ru"		"Выбрать {1}"
+	}
+	"to0_cancel"
+	{
+		"en"		"Cancel"
+		"ru"		"Отмена"
+	}
+	"to0_nodesc"
+	{
+		"en"		"No Boss Description"
+		"ru"		"Нет описания босса"
+	}
+	"to0_comfirmrandom"
+	{
+		"en"		"You will become a random boss. Changed your mind? Do {olive}/ff2boss{default} or {olive}/ff2boss <bossname>{default} to select a boss."
+		"ru"		"Ты станешь случайным боссом. Передумал? Введи {olive}/ff2boss{default} или {olive}/ff2boss <имя босса>{default}, чтобы выбрать босса."
+	}
+	"to0_boss_selected"
+	{
+		"#format"	"{1:s}"
+		"en"		"You have selected {1}. Changed your mind? Do {olive}/ff2boss{default} or {olive}/ff2boss <bossname>{default} to change your boss."
+		"ru"		"Ты выбрал {1}. Передумал? Введи {olive}/ff2boss{default} или {olive}/ff2boss <имя босса>{default}, чтобы выбрать босса."
+	}
+	"ff2_changedifficulty_denied"
+	{
+		"en"		"You cannot change your difficulty right now! Wait until the round ends and try again!"
+		"ru"		"Ты не можешь изменить свою сложность сейчас! Подожди конца раунда и попробуй снова!"
+	}
+	"FF2 Toggle Enabled Notification"
+	{
+		"en"		"You are currently in the Boss queue. Want to disable queue points? Do /ff2toggle."
+		"ru"		"В данный момент, ты в очереди на босса. Хочешь отключить очки очереди? Введи /ff2toggle."
+	}
+	"FF2 Toggle Queue Notification"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"		"You are #{1} in the Boss queue with {2} points."
+		"ru"		"Ты на #{1} месте в очереди на босса с {2} очками."
+	}
+	"FF2 Toggle Disabled Notification"
+	{
+		"en"		"You are currently NOT in the Boss queue. Want to enable queue points? Do /ff2toggle"
+		"ru"		"В данный момент, ты НЕ в очереди на роль босса. Хочешь включить очки очереди? Введи /ff2toggle"
+	}
+	"FF2 Toggle Disabled Notification For Map"
+	{
+		"en"		"You are currently NOT in the Boss queue for the current map. Want to enable queue points? Do /ff2toggle"
+		"ru"		"В данный момент, ты НЕ в очереди на роль босса для этой карты. Хочешь включить очки очереди? Введи /ff2toggle"
+	}
+	"FF2 Boss Toggle Notify"
+	{
+		"en"		"Please set your Boss queue preferences."
+		"ru"		"Пожалуйста, установи свои настройки очков очереди на босса."
+	}
+	"FF2 Toggle Command"
+	{
+		"en"		"Use {olive}/ff2toggle{default} to toggle queue points on/off"
+		"ru"		"Используй {olive}/ff2toggle{default}, чтобы переключить очки очереди"
+	}
+	"FF2 Toggle Menu Title"
+	{
+		"en"		"Boss queue points preferences:"
+		"ru"		"Настройки очков очереди на босса:"
+	}
+	"Enable Queue Points"
+	{
+		"en"		"Enable queue points"
+		"ru"		"Включить очки очереди"
+	}
+	"Disable Queue Points"
+	{
+		"en"		"Disable queue points"
+		"ru"		"Отключить очки очереди"
+	}
+	"Disable Queue Points For This Map"
+	{
+		"en"		"Disable queue points for this map only"
+		"ru"		"Отключить очки очереди только на этой карте"
+	}
+	"FF2 Companion Toggle Notify"
+	{
+		"en"		"Please set your companion selection preferences."
+		"ru"		"Пожалуйста, установи свои настройки выбора компаньона."
+	}
+	"FF2 Companion Command"
+	{
+		"en"		"Use {olive}/ff2companion{default} to toggle being selected as a companion for companion bosses"
+		"ru"		"Используй {olive}/ff2companion{default}, чтобы переключить получение роли компаньона боссов"
+	}
+	"FF2 Companion Toggle Menu Title"
+	{
+		"en"		"Companion Boss preferences:"
+		"ru"		"Настройки компаньона босса:"
+	}
+	"Enable Companion Selection"
+	{
+		"en"		"Allow being selected as a companion of a boss"
+		"ru"		"Разрешить получение роли компаньона босса"
+	}
+	"Disable Companion Selection"
+	{
+		"en"		"Disallow being selected as a companion for a boss"
+		"ru"		"Запретить получение роли компаньона босса"
+	}
+	"Disable Companion Selection For Map"
+	{
+		"en"		"Disallow being selected as a companion for a boss for this map only"
+		"ru"		"Запретить получение роли компаньона босса только на этой карте"
+	}
+	"FF2 Companion Enabled"
+	{
+		"en"		"You will be picked as a companion of a boss. Don't want to be picked as a companion? Do {olive}/ff2companion{default}"
+		"ru"		"Ты будешь выбран на роль компаньона босса. Не хочешь получать роль компаньона? Введи {olive}/ff2companion{default}"
+	}
+	"FF2 Companion Disabled"
+	{
+		"en"		"You will not be picked as a companion of a boss. Want to be picked as a companion? Do {olive}/ff2companion{default}"
+		"ru"		"Ты не будешь выбран на роль компаньона босса. Хочешь получить роль компаньона? Введи {olive}/ff2companion{default}"
+	}
+	"FF2 Companion Disabled For Map"
+	{
+		"en"		"You will not be picked as a companion of a boss for this map only. Want to be picked as a companion? Do {olive}/ff2companion{default}"
+		"ru"		"Ты не будешь выбран на роль компаньона босса только на этой карте. Хочешь получить роль компаньона? Введи {olive}/ff2companion{default}"
+	}
+	"FF2 Companion Toggle Command"
+	{
+		"en"		"Use {olive}/ff2companion{default} to toggle being selected as a companion of a boss on/off"
+		"ru"		"Используй {olive}/ff2companion{default}, чтобы переключить свою очередь на компаньона босса"
+	}
+	"FF2 Difficulty Command"
+	{
+		"en"		"Use {olive}/ff2difficulty{default} to change your boss difficulty!"
+		"ru"		"Используй {olive}/ff2difficulty{default}, чтобы выбрать свою сложность!"
+	}
+	"FF2 Boss Selection Command"
+	{
+		"en"		"To select a boss, type {olive}/ff2boss{default} to open boss selection menu, or {olive}/ff2boss <boss name>{default} to select a boss."
+		"ru"		"Чтобы выбрать босса, напиши {olive}/ff2boss{default} для открытия меню выбора босса, или {olive}/ff2boss <имя босса>{default} для выбора босса."
+	}
+	"ff2_compensation"
+	{
+		"#format"	"{1:i}"
+		"en"		"Your HP was increased by {1} percent due to missing companions!"
+		"ru"		"Твои ОЗ были увеличены на {1} процентов из-за отсутствия компаньонов!"
+	}
+	"ff2_difficulty_mod"
+	{
+		"#format"	"{1:i}"
+		"en"		"You have spawned with only {1} percent HP!"
+		"ru"		"Ты появился только с {1} процентами ОЗ!"
+	}
+	"FF2 Setup"
+	{
+		"en"		"Please configure the following:"
+		"ru"		"Пожалуйста, настрой следующее:"
+	}
+	"Configure Boss Toggle"
+	{
+		"en"		"Configure boss preferences"
+		"ru"		"Установить настройки босса"
+	}
+	"Configure Companion Toggle"
+	{
+		"en"		"Configure companion preferences"
+		"ru"		"Установить настройки компаньона"
+	}
+	"Configure Difficulty Setting"
+	{
+		"en"		"Configure boss difficulty"
+		"ru"		"Установить сложность босса"
+	}
+	"FF2 Difficulty Settings Menu Title"
+	{
+		"en"		"Up for a challenge? You can change your difficulty level! This will modify your selected boss's total health!"
+		"ru"		"Готов к испытанию? Ты можешь выбрать свой уровень сложности! Это повлияет на общее здоровье твоего босса!"
+	}
+	"ff2difficulty_undefined"
+	{
+		"#format"	"{1:i}"
+		"en"		"No difficulty selected. You will have {1} pct HP!"
+		"ru"		"Сложность не выбрана. У тебя будет {1} процентов ОЗ!"
+	}
+	"ff2difficulty_normal"
+	{
+		"#format"	"{1:i}"
+		"en"		"Difficulty: Normal ({1} pct HP)"
+		"ru"		"Сложность: Обычная ({1} процентов ОЗ)"
+	}
+	"ff2difficulty_hard"
+	{
+		"#format"	"{1:i}"
+		"en"		"Difficulty: Hard ({1} pct HP, RAGE fewer times)"
+		"ru"		"Сложность: Высокая ({1} процентов ОЗ, меньше ЯРОСТИ)"
+	}
+	"ff2difficulty_lunatic"
+	{
+		"#format"	"{1:i}"
+		"en"		"Difficulty: Lunatic ({1} pct HP, No RAGE)"
+		"ru"		"Сложность: Сумасшедшая ({1} процентов ОЗ, без ЯРОСТИ)"
+	}
+	"ff2difficulty_insane"
+	{
+		"#format"	"{1:i}"
+		"en"		"Difficulty: Insane ({1} pct HP, No RAGE)"
+		"ru"		"Сложность: Безумная ({1} процентов ОЗ, без ЯРОСТИ)"
+	}
+	"FF2 Normal Difficulty"
+	{
+		"#format"	"{1:i}"
+		"en"		"Normal: {1} percent total HP"
+		"ru"		"Обычная: {1} процентов общих ОЗ"
+	}
+	"FF2 Hard Difficulty"
+	{
+		"#format"	"{1:i}"
+		"en"		"Hard: {1} percent HP, RAGE fewer times"
+		"ru"		"Высокая: {1} процентов ОЗ, меньше ЯРОСТИ"
+	}
+	"FF2 Lunatic Difficulty"
+	{
+		"#format"	"{1:i}"
+		"en"		"Lunatic: {1} percent HP, RAGE (including death effects) disabled!"
+		"ru"		"Сумасшедшая: {1} процентов ОЗ, ЯРОСТЬ (включая эффекты смерти) отключена!"
+	}
+	"FF2 Insane Difficulty"
+	{
+		"#format"	"{1:i}"
+		"en"		"Insane: {1} percent HP, RAGE (including death effects) disabled!"
+		"ru"		"Безумная: {1} процентов ОЗ, ЯРОСТЬ (включая эффекты смерти) отключена!"
+	}
+	"FF2 New Difficulty"
+	{
+		"#format"	"{1:i}"
+		"en"		"You will now spawn with {1} percent total HP the next time you are the boss"
+		"ru"		"Теперь ты возродишся с {1} процентами от общих ОЗ при твоей следующей очереди на босса"
+	}
+	"ff2_please wait"
+	{
+		"en"		"Please wait until a round has started!"
+		"ru"		"Пожалуйста, подожди начала раунда!"
+	}
+	"track_skipped"
+	{
+		"en"		"Current track skipped! Playing next track..."
+		"ru"		"Текущий трек пропущен! Запуск следующего трека..."
+	}
+	"track_shuffle"
+	{
+		"en"		"Current track skipped! Playing random track..."
+		"ru"		"Текущий трек пропущен! Запуск случайного трека..."
+	}
+	"track_select"
+	{
+		"en"		"Select a boss theme!"
+		"ru"		"Выбери тему босса!"
+	}
+	"themes_enable"
+	{
+		"en"		"Enable boss music"
+		"ru"		"Включить музыку босса"
+	}
+	"themes_disable"
+	{
+		"en"		"Disable boss music"
+		"ru"		"Отключить музыку босса"
+	}
+	"themes_already_enabled"
+	{
+		"en"		"Boss music are already enabled."
+		"ru"		"Музыка босса уже включена."
+	}
+	"theme_skip"
+	{
+		"en"		"Skip"
+		"ru"		"Пропустить"
+	}
+	"theme_shuffle"
+	{
+		"en"		"Shuffle"
+		"ru"		"Перемешать"
+	}
+	"theme_select"
+	{
+		"en"		"Track selection"
+		"ru"		"Выбор трека"
+	}
+	"theme_menu"
+	{
+		"en"		"Music Settings"
+		"ru"		"Настройки музыки"
+	}
+	"track_info"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"		"Now Playing: {blue}{1}{default} - {orange}{2}{default}"
+		"ru"		"Сейчас играет: {blue}{1}{default} - {orange}{2}{default}"
+	}
+	"ff2_music_disabled"
+	{
+		"en"		"Boss themes are currently DISABLED."
+		"ru"		"Музыкальные темы боссов ВЫКЛЮЧЕНЫ."
+	}
+	"ff2_no_music"
+	{
+		"en"		"Could not find any themes for this boss!"
+		"ru"		"Невозможно найти какую-либо тему для этого босса!"
+	}
+	"unknown_song"
+	{
+		"en"		"{default}{snow}Unknown Song"
+		"ru"		"{default}{snow}Неизвестная песня"
+	}
+	"unknown_artist"
+	{
+		"en"		"{default}{snow}Unknown Artist"
+		"ru"		"{default}{snow}Неизвестный артист"
+	}
+	"deny_nofirst"
+	{
+		"en"		"You can not select this boss before the first round!"
+		"ru"		"Ты не можешь выбрать этого босса до первого раунда!"
+	}
+	"deny_donator"
+	{
+		"en"		"You do not have access to this boss!"
+		"ru"		"У тебя нету доступа для этого босса!"
+	}
+	"deny_duo_short"
+	{
+		"en"		"There is not enough players to play this boss!"
+		"ru"		"Недостаточно игроков, чтобы играть за этого босса!"
+	}
+	"deny_duo_off"
+	{
+		"en"		"You turned off companions, enable to play this boss!"
+		"ru"		"Нужно сперва включить выбор на роль компаньона, чтобы играть за этого босса!"
+	}
+	"deny_recent"
+	{
+		"en"		"You already played this boss on your round!"
+		"ru"		"Ты уже играл за этого босса в своём раунде!"
+	}
+	"deny_unknown"
+	{
+		"en"		"Boss could not be found!"
+		"ru"		"Босс не найден!"
+	}
+}
