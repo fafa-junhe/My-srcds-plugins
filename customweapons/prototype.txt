@@ -1,0 +1,56 @@
+"Prototype XM-3"
+{
+	"classes"
+	{
+		"sniper"	"0"
+	}
+	"baseclass"		"sniperrifle"
+	"baseindex"		"526"
+	"mag"			"150"
+	"logname"		"proto"
+	"killicon"		""
+	"description"	"Full charged shot damage +650%, +500% clip size bonus, Charge rate slower by 60%, Penetration, 25% faster fire rate, Damage -70%, Fury Swipes (2 damage/15 stacks/last 2 sec)"
+	"attributes"
+	{
+		"sniper full charge damage bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"7.5"
+		}
+		"clip size bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"6.0"
+		}
+		"SRifle Charge rate decreased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.4"
+		}
+		"sniper fires tracer"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"projectile penetration"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"3"
+		}
+		"fire rate bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.3"
+		}
+		"fury swipe"
+		{
+			"plugin"	"dota2"
+			"value"		"2 15 2"
+		}
+	}
+}

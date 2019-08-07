@@ -1,0 +1,33 @@
+"毒蛇獠牙"
+{
+"classes"       {
+"medic"       "2"
+ "scout"       "2"
+ "sniper"       "2"
+ "soldier"       "2"
+ "heavy"       "2"
+ "demoman"       "2"
+ "engineer"       "2"
+ "pyro"       "2"
+}
+ "baseclass"       "saxxy"
+ "baseindex"       "880\t"
+ "nobots"       "1"
+ "quality"       "6"
+ "logname"       "sad"
+ "description"       "\t\t"
+ "cw3_attributes"       {
+"trigger command"       {
+"plugin"       "yoners"
+ "value"       "sm_drug {
+target
+}"
+}
+}
+ "attributes"       {
+"damage penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "0.1"
+}
+}
+}

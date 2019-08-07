@@ -1,0 +1,40 @@
+"The Berlin Bear"
+{
+	"classes"
+	{
+		"heavy"		"0"
+	}
+	"baseclass"		"shotgun_primary"
+	"baseindex"		"9"
+	"logname"		"berlin_bear"
+	"steamids"		"girl"
+	"description"	"Alt Fire: Consume Neistovstvo! to charge forward\nNo reload necessary\n-80% max primary ammo on wearer\n-50 max health on wearer\nNo random critical hits"
+	"attributes"
+	{
+		"consume neistovstvo charge"
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"1000.0 -65.0"
+		}
+		"mod no reload DISPLAY ONLY"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"maxammo primary reduced"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.2"
+		}
+		"max health additive penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"-50"
+		}
+		"crit mod disabled"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.0"
+		}
+	}
+}

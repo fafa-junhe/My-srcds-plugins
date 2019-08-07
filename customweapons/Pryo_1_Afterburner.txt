@@ -1,0 +1,41 @@
+"Afterburner"
+{
+	"classes"
+	{
+		"pyro"		"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"21"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"afterburner"
+	"description"	"50% bonus afterburn damage\n25% longer afterburn duration\n \n50% less direct flame damage\nExtinguishing teammates restores 10 health, instead of 20\n \n \nCredit:\nGeneral Stat Sugguestion\n-Crafting"
+	"attributes"
+		{
+		"weapon burn dmg increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.5"
+		}	
+		"weapon burn time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.25"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		".5"
+		}
+		"extinguish restores health"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"10"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+	}
+}

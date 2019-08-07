@@ -1,0 +1,48 @@
+"撼地靴"
+{
+"classes"       {
+"demoman"       "0"
+}
+ "baseclass"       "wearable"
+ "baseindex"       "405"
+ "nobots"       "1"
+ "quality"       "6"
+ "logname"       "iron_boots"
+ "description"       "从高处坠落时 会发生一个小型地震击退敌人\n会产生3倍的掉落伤害\n 减少受到伤害时自身的推力 \n-50%粘单跳跃\n -15%移动速度\n \n \nCredit      \nGeneral Stat Sugguestion\n-Advanced Weaponiser"
+ "cw3_attributes"       {
+"earthquake on rocket jump land"       {
+"plugin"       "aw2attrib"
+ "value"       "250.0"
+}
+}
+ "attributes"       {
+"boots falling stomp"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+ "damage force reduction"       {
+"plugin"       "tf2attributes"
+ "value"       ".25"
+}
+ "airblast vulnerability multiplier"       {
+"plugin"       "tf2attributes"
+ "value"       ".25"
+}
+ "airblast vertical vulnerability multiplier"       {
+"plugin"       "tf2attributes"
+ "value"       ".25"
+}
+ "rocket jump damage reduction"       {
+"plugin"       "tf2attributes"
+ "value"       ".5"
+}
+ "move speed penalty"       {
+"plugin"       "tf2attributes"
+ "value"       ".85"
+}
+ "weapon_allow_inspect"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+}
+}

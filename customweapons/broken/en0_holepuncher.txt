@@ -1,0 +1,31 @@
+"The Hole Puncher"
+{
+	"classes"
+	{
+		"engineer"		"0"
+	}
+	"baseclass"		"shotgun_primary"
+	"baseindex"		"11"
+	"logname"		"hole_puncher"
+	"ammo"			"32"
+	"mag"			"4"
+	"description"	"(+) On kill: Your maximum metal will be increased by 25\n(+) This effect can stack up to 5 times\n \n(-) 34% Smaller clip size\n(-) -25 Max metal on wearer"
+	"attributes"
+	{
+		"max metal on kill"
+		{
+			"plugin"	"zethax-attributes"
+			"value"		"0.143 5 175"
+		}
+		"maxammo metal reduced"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.875"
+		}
+		"clip size penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.66"
+		}
+	}
+}

@@ -1,0 +1,2581 @@
+"加特林机枪"
+{
+	"classes"
+	{
+		"heavy"		"0"
+	}
+	"baseclass"		"minigun"
+	"baseindex"		"15"
+	"nobots"		"1"
+	"logname"		"sad"
+	"description"		"射击速度+60%\n伤害-90%"
+    "attributes"
+    {
+        "fire rate bonus"
+        {
+            "plugin"    "tf2attributes"
+            "value" ".60"
+        }
+        "damage penalty"
+        {
+            "plugin"    "tf2attributes"
+            "value" ".05"
+        }
+    }
+}
+"Battery Charger"
+{
+	"classes"
+	{
+		"pyro"		"1"
+	}
+	"baseclass"		"shotgun_pyro"
+	"baseindex"		"15047"
+	"mag"		"6"
+	"logname"		"charger"
+	"killicon"		"tf_shotgun"
+	"description"		"Jinada +100% damage for 1 hit (cd 20 sec), Fervor (+15% AS , Max 7 stacks), Damage -25%, Fire Rate -50%, Press Mouse2 to gain Precision buff for 10 seconds in cost of 50 health"
+	"attributes"
+	{
+		"addcond on hp sacrifice"
+		{
+			"plugin"		"moreaw2"
+			"value"		"50 96 10"
+		}
+		"set_item_texture_wear"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0"
+		}
+		"fire rate penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"fervor"
+		{
+			"plugin"		"dota2"
+			"value"		"0.15 7 1.5"
+		}
+		"jinada attr"
+		{
+			"plugin"		"dota2"
+			"value"		"2.0 20.0"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+	}
+}
+"命运之弩"
+{
+	"classes"
+	{
+		"medic"		"0"
+	}
+	"baseclass"		"crossbow"
+	"baseindex"		"305"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"sad"
+	"description"		"+随机伤害(-75% - 100%伤害)\n装弹速度+200%"
+	"cw3_attributes"
+    {
+        "random dmg"
+        {
+            "plugin"   "orion"
+            "value"     "0.25 2"
+        }
+    }
+    "attributes"
+    {
+        "Reload time penalty"
+        {
+            "plugin"    "tf2attributes"
+            "value" "3"
+        }
+    }
+}
+"Black Lightning"
+{
+	"classes"
+	{
+		"engineer"		"1"
+	}
+	"baseclass"		"pistol"
+	"baseindex"		"15046"
+	"mag"		"12"
+	"ammo"		"200"
+	"logname"		"light"
+	"killicon"		"pistol"
+	"description"		"Respawn if meter is 100% , Press Mouse2 to add condition Haste for 35 hp , -30% damage"
+	"attributes"
+	{
+		"addcond on hp sacrifice"
+		{
+			"plugin"		"moreaw2"
+			"value"		"35 91 4"
+		}
+		"set_item_texture_wear"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0"
+		}
+		"respawn where you died"
+		{
+			"plugin"		"moreaw2"
+			"value"		"16 5.0"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.7"
+		}
+	}
+}
+"Bodyshooter"
+{
+	"classes"
+	{
+		"sniper"		"0"
+	}
+	"baseclass"		"sniperrifle"
+	"baseindex"		"752"
+	"mag"		"25"
+	"logname"		"bshooter"
+	"killicon"		"		"
+	"description"		"Charge Rate -60%, Fire Rate -50%, +50% damage on bodyshot, Cannot fire without scoping, 20% to bash, knockback for 0.4 sec and deal 100 bonus damage"
+	"attributes"
+	{
+		"fire rate penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"SRifle Charge rate decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.4"
+		}
+		"damage penalty on bodyshot"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"sniper only fire zoomed"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"chance to bash"
+		{
+			"plugin"		"dota2"
+			"value"		"0.2 0.4 100 1"
+		}
+	}
+}
+"Bonkis"
+{
+	"classes"
+	{
+		"scout"		"2"
+	}
+	"baseclass"		"bat"
+	"baseindex"		"450"
+	"logname"		"bonkis"
+	"killicon"		"tf_atomizer"
+	"description"		"+322% STUPIDITY AND AUTISM. Fury swipes (+15 dmg per stack/6 stacks/7 sec) + Overpower for 3 sec or 6 hits (cd 15 sec). Honorbound Weapon. No Doublejump. Move Speed -35%"
+	"attributes"
+	{
+		"fury swipe"
+		{
+			"plugin"		"dota2"
+			"value"		"15 6 7"
+		}
+		"overpower"
+		{
+			"plugin"		"dota2"
+			"value"		"0.6 3.0 6 15.0 1.0"
+		}
+		"honorbound"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"no double jump"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"move speed penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.65"
+		}
+	}
+}
+"Brookline Reaper"
+{
+	"classes"
+	{
+		"scout"		"0"
+	}
+	"baseclass"		"scattergun"
+	"baseindex"		"15002"
+	"mag"		"6"
+	"ammo"		"32"
+	"logname"		"breaper"
+	"killicon"		"scattergun"
+	"description"		"0.4% to oneshot the target, True Strike, 50% evasion, -50% Damage, 250% Damage returns back to attacker, Each miss decreases fire rate by 25% (max 200%)"
+	"attributes"
+	{
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.5"
+		}
+		"miss decreases fire rate"
+		{
+			"plugin"		"moreaw2"
+			"value"		"0.25 8 0.0 1.0"
+		}
+		"chance to oneshot"
+		{
+			"plugin"		"orion"
+			"value"		"0.004"
+		}
+		"evasion"
+		{
+			"plugin"		"dota2"
+			"value"		"0.5"
+		}
+		"true strike"
+		{
+			"plugin"		"dota2"
+			"value"		"1"
+		}
+		"on hurt dmg attacker"
+		{
+			"plugin"		"dota2"
+			"value"		"2.5"
+		}
+		"set_item_texture_wear"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0"
+		}
+	}
+}
+"Boston Rules"
+{
+	"classes"
+	{
+		"scout"		"0"
+	}
+	"baseclass"		"scattergun"
+	"baseindex"		"15053"
+	"mag"		"8"
+	"ammo"		"32"
+	"logname"		"bostonrule"
+	"killicon"		"scattergun"
+	"description"		"-60% Fire Rate, -25% Damage, Clip Size +33%, Overpower: +220% fire rate for 8 shots or 7 seconds (Cooldown 14 sec.)"
+	"attributes"
+	{
+		"fire rate penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"clip size bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.33"
+		}
+		"overpower"
+		{
+			"plugin"		"dota2"
+			"value"		"2.2 7.0 8 14.0 1.5"
+		}
+		"set_item_texture_wear"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0"
+		}
+	}
+}
+"Caesium Engine"
+{
+	"classes"
+	{
+		"pyro"		"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"15054"
+	"mag"		"200"
+	"logname"		"caesium"
+	"killicon"		"tf_flamethrower"
+	"description"		"On active: Fires with Green Flames (requires tf_force_holiday 2), +60% Damage bonus if enemy's health higher than 50%, +20% Damage bonus if enemy's health lower than 50%, 10% of damage returns to you, Passively deals 30 dmg per second in 500 AoE (works even the weapon insn't active), Move speed -20%"
+	"attributes"
+	{
+		"move speed penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.8"
+		}
+		"provide on active"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"bonus dmg if enemy hp higher than value"
+		{
+			"plugin"		"orion"
+			"value"		"1.6 0.5"
+		}
+		"bonus dmg if enemy hp below value"
+		{
+			"plugin"		"orion"
+			"value"		"1.2 0.5"
+		}
+		"dmg done is selfhurt"
+		{
+			"plugin"		"orion"
+			"value"		"0.1"
+		}
+		"dmg nearby enemies"
+		{
+			"plugin"		"orion"
+			"value"		"30 500 1.0"
+		}
+		"set item tint RGB"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"3329330"
+		}
+		"SPELL: Halloween green flames"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"set_item_texture_wear"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0"
+		}
+	}
+}
+"火龙步枪"
+{
+	"classes"
+	{
+		"pyro"		"1"
+	}
+	"baseclass"		"shotgun"
+	"baseindex"		"1"
+	"mag"		"6"
+	"ammo"		"32"
+	"description"		"-30%装弹速度\n攻击着火敌人+300%伤害\n-50%伤害"
+	"attributes"
+	{
+		"Reload time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.3"
+		}
+		"Set DamageType Ignite"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.0"
+		}
+		"weapon burn dmg increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"3.0"
+		}
+		"weapon burn time reduced"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.5"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.5"
+		}
+	}
+	"viewmodel"
+	{
+		"modelname"		"models/weapons/c_models/c_calefactor/c_calefactor.mdl"
+	}
+	"worldmodel"
+	{
+		"modelname"		"models/weapons/c_models/c_calefactor/c_calefactor.mdl"
+	}
+}
+"缴械锅"
+{
+	"classes"
+	{
+		"medic"		"2"
+		"scout"		"2"
+		"sniper"		"2"
+		"soldier"		"2"
+		"heavy"		"2"
+		"demoman"		"2"
+		"engineer"		"2"
+		"pyro"		"2"
+	}
+	"baseclass"		"saxxy"
+	"baseindex"		"264"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"sad"
+	"description"		"使敌人缴械2秒\n-90%伤害"
+	"cw3_attributes"
+    {
+        "disable slot"
+        {
+            "plugin"   "moreaw2"
+            "value"     "0 2"
+        }
+    }
+    "attributes"
+    {
+        "damage penalty"
+        {
+            "plugin"    "tf2attributes"
+            "value" "0.1"
+        }
+    }
+}
+"Vampire's Analyzes"
+{
+	"classes"
+	{
+		"sniper"		"1"
+	}
+	"baseclass"		"jar"
+	"baseindex"		"58"
+	"logname"		"piss"
+	"killicon"		"tf_jarate"
+	"description"		"On hit: Applies Jarate and Madmilk, 25% Slower Recharge time, Mark of Death for 12 sec, No Healing from Packs and Medics"
+	"attributes"
+	{
+		"hot sauce"
+		{
+			"plugin"		"orion"
+			"value"		"3"
+		}
+		"effect bar recharge rate increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.25"
+		}
+		"self mark for death"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"12"
+		}
+		"healing received penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.0"
+		}
+	}
+}
+"缩小药水"
+{
+	"classes"
+	{
+		"scout"		"1"
+	}
+	"baseclass"		"lunchbox_drink"
+	"baseindex"		"163"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"sad"
+	"description"		"缩小到50%\n打上死亡标记\n获得移动速度加成10秒\n有30秒冷却"
+	"cw3_attributes"
+    {
+        "minimann attr"
+        {
+            "plugin"    "moreaw2"
+            "value"     "0.5 10 30 2 1"
+        }
+    }
+    "attributes"
+    {
+    }
+}
+"The Drunkard's Wrath"
+{
+	"classes"
+	{
+		"demoman"		"0"
+	}
+	"baseclass"		"grenadelauncher"
+	"baseindex"		"19"
+	"mag"		"6"
+	"ammo"		"16"
+	"logname"		"drunkard_wrath"
+	"description"		"(+) 50% Larger clip size\n(+) Press your Special Attack key to switch Firing Modes\n(+) Hammer Firing increases firing speed,\ndecreases movement speed and reduces switching speed\nTrigger Firing is the normal firing type\n(+) This weapon deploys and holsters 25% faster\n(+) 25% Increased projectile speed\n \n(-) 60% Smaller blast radius\n(-) 25% Damage penalty\n(-) Grenades shatter on contact with surfaces"
+	"attributes"
+	{
+		"provide on active"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"clip size bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"hammer mechanic"
+		{
+			"plugin"		"zethax-attributes"
+			"value"		"1"
+		}
+		"Projectile speed increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.25"
+		}
+		"single wep deploy time decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"single wep holster time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"Blast radius decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.4"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"sticky air burst mode"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"2"
+		}
+		"grenade no spin"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"精准霰弹枪"
+{
+	"classes"
+	{
+		"soldier"		"1"
+		"pyro"		"1"
+		"heavy"		"1"
+		"engineer"		"0"
+	}
+	"baseclass"		"shotgun"
+	"baseindex"		"1"
+	"mag"		"3"
+	"ammo"		"32"
+	"description"		"+30%重装速度\n-50% 弹夹容量\n+30%射击速度"
+	"attributes"
+	{
+		"Reload time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.3"
+		}
+		"clip size penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.5"
+		}
+		"fire rate bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.3"
+		}
+	}
+	"viewmodel"
+	{
+		"modelname"		"models/weapons/c_models/c_trenchgun/c_trenchgun.mdl"
+	}
+	"worldmodel"
+	{
+		"modelname"		"models/weapons/c_models/c_trenchgun/c_trenchgun.mdl"
+	}
+}
+"天空中的流星"
+{
+	"classes"
+	{
+		"scout"		"0"
+	}
+	"baseclass"		"scattergun"
+	"baseindex"		"13"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"sad"
+	"description"		"-90%伤害\n眩晕效果\n仅有两颗子弹\n装弹时间+200%"
+	"cw3_attributes"
+    {
+        "stun on hit"
+        {
+            "plugin"   "orion"
+            "value"     "1 1"
+        }
+    }
+    "attributes"
+    {
+        "damage penalty"
+        {
+            "plugin"		"tf2attributes"
+            "value"  "0.1"
+        }
+        "clip size penalty"
+        {
+            "plugin"		"tf2attributes"
+            "value"  "0.25"
+        }
+        "Reload time increased"
+        {
+            "plugin"    "tf2attributes"
+            "value" "3"
+        }
+    }
+}
+"毒蛇獠牙"
+{
+	"classes"
+	{
+		"medic"		"2"
+		"scout"		"2"
+		"sniper"		"2"
+		"soldier"		"2"
+		"heavy"		"2"
+		"demoman"		"2"
+		"engineer"		"2"
+		"pyro"		"2"
+	}
+	"baseclass"		"saxxy"
+	"baseindex"		"880	"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"sad"
+	"description"		"		"
+	"cw3_attributes"
+    {
+        "trigger command"
+        {
+            "plugin"   "yoners"
+            "value"     "sm_crazy-drug {target}"
+        }
+        "trigger command"
+        {
+            "plugin"   "yoners"
+            "value"     "sm_drug {target}"
+        }
+    }
+    "attributes"
+    {
+        "damage penalty"
+        {
+            "plugin"    "tf2attributes"
+            "value" "0.1"
+        }
+    }
+}
+"撼地靴"
+{
+	"classes"
+	{
+		"demoman"		"0"
+	}
+	"baseclass"		"wearable"
+	"baseindex"		"405"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"iron_boots"
+	"description"		"从高处坠落时 会发生一个小型地震击退敌人\n会产生3倍的掉落伤害\n 减少受到伤害时自身的推力 \n-50%粘单跳跃\n -15%移动速度\n \n \nCredit:\nGeneral Stat Sugguestion\n-Advanced Weaponiser"
+	"cw3_attributes"
+	{
+		"earthquake on rocket jump land"
+		{
+			"plugin"		"aw2attrib"
+			"value"		"250.0"
+		}
+	}
+	"attributes"
+	{
+		"boots falling stomp"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"damage force reduction"
+		{
+			"plugin"		"tf2attributes"
+			"value"		".25"
+		}
+		"airblast vulnerability multiplier"
+		{
+			"plugin"		"tf2attributes"
+			"value"		".25"
+		}
+		"airblast vertical vulnerability multiplier"
+		{
+			"plugin"		"tf2attributes"
+			"value"		".25"
+		}
+		"rocket jump damage reduction"
+		{
+			"plugin"		"tf2attributes"
+			"value"		".5"
+		}
+		"move speed penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		".85"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"海盗冲锋剑"
+{
+	"classes"
+	{
+		"demoman"		"2"
+	}
+	"baseclass"		"sword"
+	"baseindex"		"172"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"jumpin_jehosaphat"
+	"description"		"当装备时:\n粘单跳跃会暴击自己\n粘单跳跃着陆时:\n会激活冲刺\n激活时能转向\n没有随机暴击\n-15%移动速度\n有大的击中范围和拿出这武器时速度慢"
+	"cw3_attributes"
+	{
+		"provide on active"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.0"
+		}
+		"mod crit while airborne"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"charge on explosive jump land"
+		{
+			"plugin"		"aw2attrib"
+			"value"		"10"
+		}
+		"mult charge turn control"
+		{
+			"plugin"		"tf2attributes"
+			"value" 	"10001"
+		}
+		"crit mod disabled"
+		{
+			"plugin"		"tf2attributes"
+			"value" 	"0"
+		}
+		"move speed penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.85"
+		}
+		"is_a_sword"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"72"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"吊首者"
+{
+	"classes"
+	{
+		"spy"		"4"
+	}
+	"baseclass"		"invis"
+	"baseindex"		"30"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"plot_hook"
+	"description"		"手表在隐身的同时挂在墙上或者天花板上\n隐身时移除所有负面效果\n \n无法拿情报\n \n \nCredit:\nGeneral Stat Sugguestion\n-Advanced Weaponiser\nCustom Attribute\n-Zethax\n-Theray\n \nDefault *Invis Watch* Model"
+	"cw3_attributes"
+	{
+		"cloak is hook"
+		{
+			"plugin"		"aw2attrib"
+			"value"		"1"
+		}
+		"remove negative status while cloaked"
+		{
+			"plugin"		"zethax-ctf2w"
+			"value"		"1"
+		}
+		"cannot pick up intelligence"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"mult cloak rate"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"-.9"
+		}
+		"mult decloak rate"
+		{
+			"plugin"		"tf2attributes"
+			"value"		".1"
+		}
+		"SET BONUS: cloak blink time penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"Greater Basher"
+{
+	"classes"
+	{
+		"pyro"		"2"
+	}
+	"baseclass"		"fireaxe"
+	"baseindex"		"214"
+	"logname"		"redaxe"
+	"killicon"		"fireaxe"
+	"description"		"Damage -25%, MS -10%, AS +15%, 17% to Bash and knockback the enemy, Bash will deal 100 damage and stun for 1.4 sec"
+	"attributes"
+	{
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"melee attack rate bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.85"
+		}
+		"move speed penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.9"
+		}
+		"chance to bash"
+		{
+			"plugin"		"dota2"
+			"value"		"0.17 1.4 100 1"
+		}
+	}
+}
+"狼牙棒"
+{
+	"classes"
+	{
+		"scout"		"2"
+	}
+	"baseclass"		"bat"
+	"baseindex"		"325	"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"sad"
+	"description"		"击中后给目标5秒尿瓶效果\n击中后给目标5秒牛奶效果\n击中后给目标5秒流血效果\n没挥中会击中自己(自己的效果时间+2)"
+	"cw3_attributes"
+    {
+        "hotsauce on hit"
+        {
+            "plugin"    "orion"
+            "value"     "5 7"
+        }
+        "hotsauce yourself on miss"
+        {
+            "plugin"    "tf2attributes"
+            "value" "7 7"
+        }
+    }
+    "attributes"
+    {
+        "hit self on miss"
+        {
+            "plugin"    "tf2attributes"
+            "value" "1"
+        }
+    }
+}
+"The Firkin Flamer"
+{
+	"classes"
+	{
+		"pyro"		"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"215"
+	"logname"		"firkin_flamer"
+	"description"		"Alt-Fire: Leak oil, which can be ignited\n-90% afterburn duration"
+	"attributes"
+	{
+		"alt fire is oil"
+		{
+			"plugin"		"advanced-weaponiser-2-attributes"
+			"value"		"1"
+		}
+        "weapon burn time reduced"
+        {
+            "plugin"		"tf2attributes"
+			"value"		"0.1"
+        }
+        "airblast disabled"
+        {
+            "plugin"		"tf2attributes"
+			"value"		"1"
+        }
+	}
+}
+"间谍打手"
+{
+	"classes"
+	{
+		"pyro"		"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"21"
+	"nobots"		"1"
+	"logname"		"sad"
+	"description"		"伤害-25%\n对隐身的间谍产生暴击"
+	"cw3_attributes"
+    {
+        "crit vs invisible players"
+        {
+            "plugin"   "orion"
+            "value"     "1"
+        }
+    }
+    "attributes"
+    {
+        "damage penalty"
+        {
+            "plugin"    "tf2attributes"
+            "value" ".75"
+        }
+        "weapon burn dmg increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}	
+		"weapon burn time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"extinguish restores health"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"10"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+    }
+}
+"The Berlin Bear"
+{
+	"classes"
+	{
+		"heavy"		"0"
+	}
+	"baseclass"		"shotgun_primary"
+	"baseindex"		"9"
+	"logname"		"berlin_bear"
+	"steamids"		"girl"
+	"description"		"Alt Fire: Consume Neistovstvo! to charge forward\nNo reload necessary\n-80% max primary ammo on wearer\n-50 max health on wearer\nNo random critical hits"
+	"attributes"
+	{
+		"consume neistovstvo charge"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"1000.0 -65.0"
+		}
+		"mod no reload DISPLAY ONLY"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"maxammo primary reduced"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.2"
+		}
+		"max health additive penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"-50"
+		}
+		"crit mod disabled"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.0"
+		}
+	}
+}
+"The Provisioner"
+{
+	"classes"
+	{
+		"heavy"		"0"
+	}
+	"baseclass"		"minigun"
+	"baseindex"		"41"
+	"ammo"		"200"
+	"logname"		"provisions"
+	"description"		"(+) While spun up you and nearby allies will gain 12 hp per sec\n and allies receive 20% of their offhand ammo per sec\n(+) Kills increase the effectiveness of this effect by 50% for 5 seconds\n(+) Dispensing Fury: Through healing allies you build up a 'Fury' meter\n(+) When 'Fury' is charged activate to double the dispensing radius and effectiveness\nfor 10 seconds\n \n(-) 33% Damage penalty\n(-) 25% Less health received from other healing sources on wearer"
+	"attributes"
+	{
+		"dispenser minigun main"
+		{
+			"plugin"		"zethax-attributes"
+			"value"		"1 350 5.0 10.0 0.25 150"
+		}
+		"dispenser minigun heal"
+		{
+			"plugin"		"zethax-attributes"
+			"value"		"0.08333"
+		}
+		"dispenser minigun ammo"
+		{
+			"plugin"		"zethax-attributes"
+			"value"		"1.0 0.2"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.67"
+		}
+		"health from packs decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"health from healers reduced"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+	}
+}
+"水中霸王"
+{
+	"classes"
+	{
+		"heavy"		"2"
+	}
+	"baseclass"		"fists"
+	"baseindex"		"331"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"jaws_of_steel"
+	"description"		"在水里/被尿/被牛奶时:\n+25%移动速度\n+25%伤害\n+25%攻击速度\n不在水里/被尿/被牛奶时:\n-50%移动速度\n-25%伤害-25%攻击速度"
+	"cw3_attributes"
+	{
+		"single wep deploy time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"single wep holster time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+"swim speed increased"
+{
+"plugin"		"rays-attributes"
+"value"		"1.25"
+}
+"move speed decrease while not swimming"
+{
+"plugin"		"rays-attributes"
+"value"		"0.5"
+}
+"damage while swimming increased"
+{
+"plugin"		"rays-attributes"
+"value"		"1.25"
+}
+"damage while not swimming decreased"
+{
+"plugin"		"rays-attributes"
+"value"		"0.75"
+}
+"attack speed increased while swimming"
+{
+"plugin"		"rays-attributes"
+"value"		"0.75"
+}
+"attack speed decreased while not swimming"
+{
+"plugin"		"rays-attributes"
+"value"		"1.25"
+}
+		"weapon_allow_inspect"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"快速暗杀者"
+{
+	"classes"
+	{
+		"sniper"		"0"
+	}
+	"baseclass"		"sniperrifle"
+	"baseindex"		"14"
+	"mag"		"25"
+	"ammo"		"25"
+	"description"		"部署时间(拿出武器时间)-35%\n充能速度-20%\n最大生命-15%"
+	"attributes"
+	{
+		"deploy time decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.35"
+		}
+		"SRifle Charge rate decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.2"
+		}
+		"max health additive penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"-15"
+		}
+	}
+	"viewmodel"
+	{
+		"modelname"		"models/weapons/c_models/c_highnoon/c_highnoon.mdl"
+	}
+	"worldmodel"
+	{
+		"modelname"		"models/weapons/c_models/c_highnoon/c_highnoon.mdl"
+	}
+}
+"Khopesh Climber"
+{
+	"classes"
+	{
+		"sniper"		"2"
+	}
+	"baseclass"		"club"
+	"baseindex"		"171"
+	"logname"		"khopesh_climber"
+	"killicon"		"club"
+	"description"		"On Hit (Walls): Climb!"
+	"attributes"
+	{
+		"climb walls"
+		{
+			"plugin"		"cw2_khopesh"
+			"value" 	"1"
+		}
+		"fire rate penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.95"
+		}
+	}
+}
+"The Marauders Mace"
+{
+    "classes"
+    {
+        "soldier"    "2"
+    }
+    "baseclass"        "shovel"
+    "baseindex"        "416"
+    "nobots"        "1"
+    "logname"        "marauders_mace"
+    "description"    "Performs an earthquake upon\nlanding after a Rocket Jump\nThis weapon is pretty heavy\n+20% reduced fall damage while active\n40% slower firing speed"
+    "attributes"
+    {
+        "earthquake on rocket jump land"
+        {
+            "plugin"    "advanced-weaponiser-2-attributes"
+            "value"        "1"
+        }
+        "fall dmg reduced"
+        {
+            "plugin"    "advanced-weaponiser-2-attributes"
+            "value"        "0.75"
+        }
+        "item is heavy"
+        {
+            "plugin"    "advanced-weaponiser-2-attributes"
+            "value"        "10.0"
+        }
+        "damage force reduction"
+        {
+            "plugin"    "tf2attributes"
+            "value"        "0.8"
+        }
+        "fire rate penalty"
+        {
+            "plugin"    "tf2attributes"
+            "value"        "1.4"
+        }
+    }
+}
+"The Matador"
+{
+	"classes"
+	{
+		"soldier"		"0"
+	}
+	"baseclass"		"rocketlauncher"
+	"baseindex"		"18"
+	"nobots"		"1"
+	"logname"		"matador"
+	"killicon"		"tf_projectile_rocket"
+	"description"		"Projectiles are controllable\nOn hit: 100.0 vertical push force (working on it :P)\n-20% slower firing speed\n-30% explosion radius"
+	"attributes"
+	{
+		"controllable projectiles"
+		{
+			"plugin"		"advanced-weaponiser-2-attributes"
+			"value"		"0.25"
+		}
+		"apply z velocity on damage"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"2.0"
+		}
+		"fire rate penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.2"
+		}
+		"Blast radius decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.7"
+		}
+	}
+}
+"Maxine"
+{
+	"classes"
+	{
+		"heavy"		"0"
+	}
+	"baseclass"		"minigun"
+	"baseindex"		"15"
+	"logname"		"maxine"
+	"killicon"		"minigun"
+	"description"		"No move speed penalty while deployed\n10 ammo consumed per second while deployed\n15% slower spin up time\n-25% damage penalty\nNo ammo from dispensers while active"
+	"attributes"
+	{
+		"aiming movespeed increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+        "uses ammo while aiming"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"10"
+		}
+        "minigun spinup time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.15"
+		}
+        "damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+        "no primary ammo from dispensers while active"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"Maniac's Maschinenpistole"
+{
+	"classes"
+	{
+		"medic"		"0"
+	}
+	"baseclass"		"syringegun_medic"
+	"baseindex"		"412"
+	"mag"		"50"
+	"ammo"		"150"
+	"logname"		"machine40"
+	"description"		"(+) On hit: +5% Faster healing speed\n(+) This effect will stack until you reach 100% bonus healing rate\n(+) +25% Larger clip size\n \n(-) 25% Damage penalty\n(-) While healing: Bonus healing rate will slowly decay"
+	"attributes"
+	{
+		"clip size bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.25"
+		}
+		"hits increase healing rate"
+		{
+			"plugin"		"zethax-attributes"
+			"value"		"0.05 20 1"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"projectile spread angle penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"Merasmus' Private Stash"
+{
+	"classes"
+	{
+		"soldier"		"1"
+	}
+	"baseclass"		"buff_item"
+	"baseindex"		"129"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"private_stash"
+	"description"		"Rage provides 100% critical chance on nearby teammates and marks them for death.\nRequires 1200 damage to fill."
+	"cw3_attributes"
+	{
+		"banner rage fill multiplier"
+		{
+			# damage fills the rage meter half as much as normal
+			"plugin"		"custom-attribute-adapter/attr_rage_meter_mult"
+			"value"		"0.5"
+		}
+		"increase buff duration HIDDEN"
+		{
+			# duration of buff is halved
+			"plugin"		"tf2attributes"
+			"value"		"0.5"
+		}
+		"custom soldier buff type"
+		{
+			# implements custom buff type
+			"plugin"		"custom-attribute-adapter/attr_buff_override"
+			"value"		"666"
+		}
+		
+		# note: custom weapons doesn't have any way to preserve attributes so you'll have to have a banner equipped to see the meter
+		# this attribute needs to be present so rage is incremented
+		"mod soldier buff type"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"Octano-200"
+{
+	"classes"
+	{
+		"pyro"		"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"21"
+	"mag"		"200"
+	"logname"		"igniter"
+	"killicon"		"tf_thedegreaser"
+	"description"		"While Active: MS +30%, Damage +50%, no afterburn, +50% airblast cost, no ammo from dispencers"
+	"attributes"
+	{
+		"move speed bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.3"
+		}
+		"provide on active"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"airblast cost increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"weapon burn time reduced"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0"
+		}
+		"damage bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"no primary ammo from dispensers while active"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"灌肠弓" 
+{
+	"classes"
+	{
+		"sniper"		"0"
+	}
+	"baseclass"		"compound_bow" 
+	"baseindex"        "56"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"penetrator"
+	"description"		"箭最多能弹射两次 能穿透敌人\n射箭的时候-50%\n速度-25%射击速度"
+	"cw3_attributes"
+	{
+		"projectiles bounce"
+		{
+			"plugin"		"advanced-weaponiser-2-attributes"
+			"value"		"2"
+		}
+		"projectile penetration"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"fire rate penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.25"
+		}
+		"sniper aiming movespeed decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		".5"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"Prototype XM-3"
+{
+	"classes"
+	{
+		"sniper"		"0"
+	}
+	"baseclass"		"sniperrifle"
+	"baseindex"		"526"
+	"mag"		"150"
+	"logname"		"proto"
+	"killicon"		"		"
+	"description"		"Full charged shot damage +650%, +500% clip size bonus, Charge rate slower by 60%, Penetration, 25% faster fire rate, Damage -70%, Fury Swipes (2 damage/15 stacks/last 2 sec)"
+	"attributes"
+	{
+		"sniper full charge damage bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"7.5"
+		}
+		"clip size bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"6.0"
+		}
+		"SRifle Charge rate decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.4"
+		}
+		"sniper fires tracer"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"projectile penetration"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"3"
+		}
+		"fire rate bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.3"
+		}
+		"fury swipe"
+		{
+			"plugin"		"dota2"
+			"value"		"2 15 2"
+		}
+	}
+}
+"Afterburner"
+{
+	"classes"
+	{
+		"pyro"		"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"21"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"afterburner"
+	"description"		"50% bonus afterburn damage\n25% longer afterburn duration\n \n50% less direct flame damage\nExtinguishing teammates restores 10 health, instead of 20\n \n \nCredit:\nGeneral Stat Sugguestion\n-Crafting"
+	"attributes"
+		{
+		"weapon burn dmg increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}	
+		"weapon burn time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.25"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		".5"
+		}
+		"extinguish restores health"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"10"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"The Bleedthrower"
+{
+	"classes"
+	{
+		"pyro"		"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"21"
+	"logname"		"bleedthrower"
+	"steamids"		"CHAWLZ"
+	"description"		"Inflicts Bleeding instead of Afterburn"
+	"attributes"
+	{
+		"bleed instead of burn"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"1"
+		}
+	}
+}
+"The Pearce 75"
+{
+	"classes"
+	{
+		"pyro"		"1"
+	}
+	"baseclass"		"raygun"
+	"baseindex"		"442"
+	"logname"		"pearce75"
+	"steamids"		"chawlz"
+	"description"		"Damage scales up to +80% with time enemy has been burning up to 8 seconds\n-50% damage falloff penalty"
+	"attributes"
+	{
+		"burn time dmg scale" # 1s = 1.1   8s = 1.8   value 2.0 | 1s = 1.2   8s = 2.6
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"1.0"
+		}
+		"dmg falloff increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.5"
+		}
+		"energy weapon no ammo"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"energy weapon penetration"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"energy weapon no hurt building"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"energy weapon no deflect"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"The Quickie Launcher"
+{
+	"classes"
+	{
+		"demoman"		"1"
+	}
+	"baseclass"		"pipebomblauncher"
+	"baseindex"		"20"
+	"mag"		"2"
+	"ammo"		"24"
+	"description"		"+50% faster firing speed\n-0.4 sec faster bomb arm time\n-20% damage penalty\n-75% clip size\n-20% explosion radius\n-6 max pipebombs out\n+100% damage to self"
+	"attributes"
+	{
+		"fire rate bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.5"
+		}
+		"sticky arm time bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"-0.4"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.8"
+		}
+		"clip size penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.25"
+		}
+		"Blast radius decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.8"
+		}
+		"max pipebombs decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"-6"
+		}
+		"blast dmg to self increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"2.0"
+		}
+	}
+}
+"Divine Rapier"
+{
+	"classes"
+	{
+		"demoman"		"2"
+	}
+	"baseclass"		"sword"
+	"baseindex"		"132"
+	"logname"		"rapier"
+	"killicon"		"sword"
+	"description"		"+330 Damage, Speed buff on hit, +3 sec charge duration, -35% MS, -40% AS, 30% Longer Weapon Switch"
+	"attributes"
+	{
+		"charge time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"3"
+		}
+		"damage bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"6.08"
+		}
+		"move speed penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.65"
+		}
+		"speed buff ally"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"melee attack rate bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.4"
+		}
+		"deploy time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.3"
+		}
+	}
+}
+"The Industrialist"
+{
+	"classes"
+	{
+		"scout"		"0"
+	}
+	"baseclass"		"scattergun"
+	"baseindex"		"13"
+	"mag"		"6"
+	"ammo"		"16"
+	"logname"		"industrialist"
+	"killicon"		"scattergun"
+	"description"		"(+) On kill: Reload clip instantly and gain 25% of your primary weapon ammo back\n(+) On kill: 20% Faster firing speed for 2 seconds\n \n(-) 33% Slower reload speed\n(-) 50% Less maximum primary ammo carried\n(-) This weapon cannot gain ammo from packs or dispensers"
+	"attributes"
+	{
+		"refill clip on kill"
+		{
+			"plugin"		"custom-attributes"
+			"value" 	"6 16 4 0.8"
+		}
+		"faster reload rate"
+		{
+			"plugin"		"tf2attributes"
+			"value" 	"1.33"
+		}
+		"maxammo primary reduced"
+		{
+			"plugin"		"tf2attributes"
+			"value" 	"0.0"
+		}
+	}
+}
+"The Plutonium Pistol"
+{
+	"classes"
+	{
+		"scout"		"1"
+	}
+	"baseclass"		"handgun_scout_secondary"
+	"baseindex"		"449"
+	"logname"		"plutonium_pistol"
+	"description"		"On 3 hits without missing: Marks the target for 10 sec, allowing them to be seen through walls\n+25% faster firing speed\n25% more accurate\n-50% clip size\n-20% damage penalty\nNo random critical hits"
+	"attributes"
+	{
+		"meet the scout combo"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"3 10.0"
+		}
+		"fire rate bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"weapon spread bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"clip size penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.5"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.8"
+		}
+		"crit mod disabled"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.0"
+		}
+	}
+}
+"The Pop Capper"
+{
+	"classes"
+	{
+		"scout"		"1"
+	}
+	"baseclass"		"pistol"
+	"baseindex"		"294"
+	"logname"		"pop_capper"
+	"steamids"		"girl"
+	"description"		"Alt-fire: 25 self-damage to incur a buff for 3 sec\nNo random critical hits"
+	"attributes"
+	{
+		"addcond on hp sacrifice"
+		{
+			"plugin"		"moreaw2"
+			"value"		"-25 cond 3.0"
+		}
+		"crit mod disabled"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.0"
+		}
+	}
+}
+"Critsmourne The Lifestealer"
+{
+	"classes"
+	{
+		"scout"		"2"
+	}
+	"baseclass"		"bat"
+	"baseindex"		"452"
+	"logname"		"critsmourne"
+	"steamids"		"girl"
+	"description"		"On Hit: Bleed for 5 seconds.\nOn Miss: Hit yourself. Idiot.\nAlt-Fire: 25 self-damage to gain minicrits for 3 seconds\n20% of damage done is returned as health\n-10% slower firing speed\n25% longer weapon switch\nNo random critical hits"
+	"attributes"
+	{
+		"addcond on hp sacrifice"
+		{
+			"plugin"		"moreaw2"
+			"value"		"-25 cond 3.0"
+		}
+		"dmg pct is leech"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"0.2"
+		}
+		"fire rate penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.1"
+		}
+		"deploy time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.25"
+		}
+		"crit mod disabled"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.0"
+		}
+		"attach particle effect"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"10"
+		}
+	}
+}
+"Sharkshooter"
+{
+	"classes"
+	{
+		"scout"		"0"
+	}
+	"baseclass"		"scattergun"
+	"baseindex"		"13"
+	"mag"		"6"
+	"ammo"		"32"
+	"logname"		"sharkshooter"
+	"killicon"		"scattergun"
+	"description"		"Damage equals by 2% of Enemy's Current Health, 5% Vampiric Shots, 10% MS Bonus, Instant Reload, -50% Fire Rate, Swimming speed increased by 50%"
+	"attributes"
+	{
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.01"
+		}
+		"enemy hp to dmg"
+		{
+			"plugin"		"orion"
+			"value"		"0.02"
+		}
+		"lifesteal"
+		{
+			"plugin"		"dota2"
+			"value"		"0.05"
+		}
+		"move speed bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.1"
+		}
+		"Reload time decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.0"
+		}
+		"fire rate penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"swim speed increased"
+		{
+			"plugin"		"rays-attributes"
+			"value"		"1.5"
+		}
+	}
+}
+"Shotgun Bride"
+{
+	"classes"
+	{
+		"scout"		"0"
+	}
+	"baseclass"		"shotgun_building_rescue"
+	"baseindex"		"525"
+	"nobots"		"1"
+	"mag"		"0"
+	"logname"		"shotgun_bride"
+	"killicon"		"scattergun"
+	"description"		"Hold Fire to load up your clip\nRelease Fire to unleash the barrage\n15% slower reload time\n-50% clip size"
+	"attributes"
+	{
+		"auto fires full clip"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+        "Reload time increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.15"
+		}
+		"clip size penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.5"
+		}
+        "fire rate bonus"
+        {
+            "plugin"		"tf2attributes"
+			"value"		"0.1"
+        }
+        "override projectile type"
+        {
+            "plugin"		"tf2attributes"
+			"value"		"18"
+        }
+	}
+}
+"The Clever Girl"
+{
+	"classes"
+	{
+		"sniper"		"0"
+	}
+	"baseclass"		"sniperrifle"
+	"baseindex"		"14"
+	"logname"		"clever_girl"
+	"steamids"		"Abe"
+	"description"		"Critical kills are silent\nWhile Scoped: Become invisible at 50% power charge\nTaking damage disrupts the cloak\n-30% damage penalty\n-50% move speed while aiming\nNo headshots when not fully charged\n"
+	"attributes"
+	{
+		"crits are silent kill"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"1"
+		}
+		"stealth at srifle charge amt"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"75.0"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.7"
+		}
+		"aiming movespeed decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"sniper no headshot without full charge"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"The Iron Spine"
+{
+	"classes"
+	{
+		"sniper"		"1"
+	}
+	"baseclass"		"tf_wearable"
+	"baseindex"		"231"
+	"logname"		"iron_spine"
+	"steamids"		"chawlz"
+	"description"		"-75% damage taken from behind\n-15 max health on wearer\nThis weapon is useable in medieval mode"
+	"attributes"
+	{
+		"dmg taken from behind"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"0.25"
+		}
+		"allowed in medieval mode"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"max health additive penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"-15"
+		}
+	}
+}
+"The Bushman's Butterfly"
+{
+	"classes"
+	{
+		"sniper"		"2"
+	}
+	"baseclass"		"club"
+	"baseindex"		"232"
+	"logname"		"melee_charger"
+	"description"		"(+) This weapon stores +1 critical hit for every headshot you get\nup to 15 crits can be stored\n \n(-) 25% Damage penalty\n(-) 15% Slower swing speed\n(-) No random critical hits"
+	"attributes"
+	{
+		"store crit on headshot"
+		{
+			"plugin"		"zethax-attributes"
+			"value"		"15"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"crit mod disabled"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0"
+		}
+		"fire rate penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.15"
+		}
+	}
+}
+"The Instant Iaido"
+{
+	"classes"
+	{
+		"sniper"		"2"
+	}
+	"baseclass"		"club"
+	"baseindex"		"357"
+	"logname"		"instant_iaido"
+	"steamids"		"girl"
+	"description"		"On Draw: Deal and take minicrits for 1.5 seconds\n-20% slower firing speed\n+20% damage from melee sources while active"
+	"attributes"
+	{
+		"ondraw addcond"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"condbuffed 1.5"
+		}
+		"ondraw addcond"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"condmarkfordeath 1.5"
+		}
+		"fire rate penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.2"
+		}
+		"dmg from melee increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.2"
+		}
+	}
+}
+"The Trench Buster"
+{
+	"classes"
+	{
+		"soldier"		"0"
+	}
+	"baseclass"		"rocketlauncher"
+	"baseindex"		"127"
+	"mag"		"2"
+	"ammo"		"20"
+	"logname"		"trench_buster"
+	"description"		"(+) Carry 3 special rocket types with this equipped:\n* HE Rockets (Big Blast, Slightly Higher dmg, slower projectile)\n* AP Rockets (High Dmg, Higher dmg vs buildings, more dmg to self)\n* APCR Rockets (Faster reload, faster projectile, slightly smaller blast)\n(+) Press your Special Attack key to switch between explosive types\n \n(-) Requires clip to be empty before being able to load new rockets\n(-) 50% Smaller clip size"
+	"attributes"
+	{
+		"mortar mechanic"
+		{
+			"plugin"		"zethax-attributes"
+			"value"		"1"
+		}
+		"clip size penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.5"
+		}
+		"crit mod disabled"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0"
+		}
+	}
+}
+"The Jet-Powered Galoshes"
+{
+	"classes"
+	{
+		"soldier"		"1"
+	}
+	"baseclass"		"tf_wearable"
+	"baseindex"		"133"
+	"logname"		"jet_powered_galoshes"
+	"steamids"		"chawlz"
+	"description"		"Hold Space to hover mid-air for up to 2.5 seconds\n+25% fall damage vulnerability on wearer"
+	"attributes"
+	{
+		"hover time"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"2.5"
+		}
+		"fall dmg mult"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"1.25"
+		}
+	}
+}
+"钝化火箭筒"
+{
+	"classes"
+	{
+		"soldier"		"0"
+	}
+	"baseclass"		"rocketlauncher"
+	"baseindex"		"414"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"battering_cannon"
+	"description"		"25% bonus push force against both enemy players and the user\n \n25% less projectile speed\n \n \nCredit:\nGeneral Stat Sugguestion\n-Sweddy\n-Karma Charger"
+	"attributes"
+	{
+		"self dmg push force increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.25"
+		}
+		"apply z velocity on damage"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"150"
+		}
+		"apply look velocity on damage"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"150"
+		}
+		"damage causes airblast"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"Projectile speed decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		".75"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+	"sound"
+	{
+		"player"
+		{
+			"find"		")weapons/rocket_ll_shoot.wav"
+			"replace"		"weapons/rocket_ll_shoot.wav"
+			"pitch"		"75"
+		}
+		"player"
+		{
+			"find"		")weapons/rocket_ll_shoot_crit.wav"
+			"replace"		"weapons/rocket_ll_shoot.wav"
+			"pitch"		"150"
+		}
+	}
+}
+"The +1 Revolver of Nekonus"
+{
+	"classes"
+	{
+		"spy"		"0"
+	}
+	"baseclass"		"revolver"
+	"baseindex"		"24"
+	"logname"		"nekonus_revolver"
+	"description"		"On Hit: Speedboost for 5 seconds\nOn Miss: Piss yourself"
+	"attributes"
+	{
+		"add tfcond on miss"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"iCond 0.25saftermissed 5.0secs"
+		}
+		"speed_boost_on_hit"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"5"
+		}
+	}
+}
+"The Destinguished Gentleman"
+{
+	"classes"
+	{
+		"spy"		"0"
+	}
+	"baseclass"		"revolver"
+	"baseindex"		"525"
+	"logname"		"destinguished_gentleman"
+	"description"		"Combo system: damage increases for every hit, third hit will minicrit, purge bleed+burn+fluids, and reset the combo\nCombo is reset upon missing\nHitting buildings does not reset your combo\n+25% switch speed\n+10% fire rate"
+	"attributes"
+	{
+		"meet the spy combo"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"0.6 0.8 1.0"
+		}
+		"deploy time decreased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.75"
+		}
+		"fire rate bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.9"
+		}
+	}
+}
+"Obeah"
+{
+	"classes"
+	{
+		"spy"		"0"
+	}
+	"baseclass"		"revolver"
+	"baseindex"		"525"
+	"logname"		"obeah"
+	"description"		"On Hit From Behind: Marks for death for 5 seconds-50% clip size-10% damage penalty"
+	"attributes"
+	{
+		"backattack addcond"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"condmarkfordeath 5.0"
+		}
+		"clip size penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.5"
+		}
+		"damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.9"
+		}
+	}
+}
+"Run Jump And Die"
+{
+	"classes"
+	{
+		"spy"		"0"
+	}
+	"baseclass"		"revolver"
+	"baseindex"		"24"
+	"logname"		"run_jump_die"
+	"steamids"		"girl"
+	"description"		"While on fire: Receive a speedboost\n-10 max health on wearer"
+	"attributes"
+	{
+		"onfire speedboost"
+		{
+			"plugin"		"chdata-attributes"
+			"value"		"45.0"
+		}
+		"max health additive penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"-10"
+		}
+	}
+}
+"Secretive Service"
+{
+	"classes"
+	{
+		"spy"		"2"
+	}
+	"baseclass"		"knife"
+	"baseindex"		"4"
+	"logname"		"secretive_service"
+	"description"		"(+) On backstab kill: Gain faster movement speed, faster cloaking speed,\nfaster decloaking speed and increased sapper power\n(+) 25% of the damage taken will be resisted and applied\nas cloak loss. Damage resistance reduces with cloak\n \n(-) 25% of the damage taken will be returned as Cloak loss"
+	"attributes"
+	{
+		"backstab service"
+		{
+			"plugin"		"zethax-attributes"
+			"value"		"0.05 0.05 0.025 0.05 10"
+		}
+		"damage taken drains cloak"
+		{
+			"plugin"		"zethax-attributes"
+			"value"		"0.25"
+		}
+	}
+}
+"The Poking Stick"
+{
+	"classes"
+	{
+		"spy"		"2"
+	}
+	"baseclass"		"bat"
+	"baseindex"		"572"
+	"logname"		"poking_stick"
+	"steamids"		"STEAM_0:1:16442933"
+	"description"		"-From Advanced Weaponiser 2-\n \n+100% melee range\nOn Kill: One second of 100% critical chance\n-100% fire rate penalty"
+	"attributes"
+	{
+		"melee range multiplier"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"2.0"
+		}
+		"critboost on kill"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"fire rate penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"2.0"
+		}
+	}
+}
+"寄生者"
+{
+	"classes"
+	{
+		"spy"		"1"
+	}
+	"baseclass"		"builder"
+	"baseindex"		"735"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"transmission"
+	"description"		"放在建筑上时玩家每秒回4血\n电子工兵+50%血\n电子工兵伤害-75%"
+	"attributes"
+	{
+		"sapper damage leaches health"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"4"
+		}
+		"sapper health bonus"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"sapper damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		".75"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+	}
+}
+"The Stab-n-Away"
+{
+	"classes"
+	{
+		"spy"		"2"
+	}
+    
+	"baseclass"		"knife"
+	"baseindex"		"4"
+	"logname"		"stab_n_away"
+	"description"		"Instant cloak upon backstab"
+    
+	"attributes"
+	{
+		"fastcloak on backstab"
+		{
+			"plugin"		"advanced-weaponiser-2-attributes"
+			"value"		"1"
+		}
+	}
+}
+"Subjugated Saboteur"
+{
+	"classes"
+	{
+		"spy"		"1"
+	}
+	"baseclass"		"sapper"
+	"baseindex"		"735"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"subjugated_saboteur"
+	"description"		"Sapper reprograms enemy buildings so they assist your team for a short period before self-destructing."
+	"cw3_attributes"
+	{
+		"sapper damage penalty"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"0.0"
+		}
+	}
+	"attributes"
+	{
+		# we need to use the CW2 variant because CW3 can't get the weapon through its forward
+		# I might just need to update the adapter side, but we'll save that for another day
+		"sapper reprograms buildings"
+		{
+			"plugin"		"custom-attribute-adapter/attr_sapper_reprograms_buildings"
+			"value"		"sap_time=5.0 self_destruct_time=15.0"
+		}
+		"sapper recharge time"
+		{
+			"plugin"		"custom-attribute-adapter/attr_sapper_recharge_time"
+			"value"		"10.0"
+		}
+	}
+}
+"魔眼"
+{
+	"classes"
+	{
+		"sniper"		"0"
+	}
+	"baseclass"		"sniperrifle"
+	"baseindex"		"1"
+	"description"		"会产生弹头轨迹 \nminicrit变crit\n 瞄准时不会减慢速度 \n+50充能速度 \n着火时会获得更多的伤害"
+	"attributes"
+	{
+		"sniper fires tracer"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"SRifle Charge rate increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+		"minicrits become crits"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1"
+		}
+		"dmg taken from fire increased"
+		{
+			"plugin"		"tf2attributes"
+			"value"		"1.5"
+		}
+	}
+}
+"死神之锤"
+{
+	"classes"
+	{
+		"medic"		"2"
+		"scout"		"2"
+		"sniper"		"2"
+		"soldier"		"2"
+		"heavy"		"2"
+		"demoman"		"2"
+		"engineer"		"2"
+		"pyro"		"2"
+	}
+	"baseclass"		"saxxy"
+	"baseindex"		"1123"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"sad"
+	"description"		"		"
+	"cw3_attributes"
+    {
+        "trigger command"
+        {
+            "plugin"   "yoners"
+            "value"     "sm_smash {target}"
+        }
+    }
+    "attributes"
+    {
+        "damage penalty"
+        {
+            "plugin"    "tf2attributes"
+            "value" "0.1"
+        }
+    }
+}

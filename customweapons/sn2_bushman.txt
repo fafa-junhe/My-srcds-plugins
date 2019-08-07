@@ -1,0 +1,34 @@
+"The Bushman's Butterfly"
+{
+	"classes"
+	{
+		"sniper"	"2"
+	}
+	"baseclass"		"club"
+	"baseindex"		"232"
+	"logname"		"melee_charger"
+	"description"	"(+) This weapon stores +1 critical hit for every headshot you get\nup to 15 crits can be stored\n \n(-) 25% Damage penalty\n(-) 15% Slower swing speed\n(-) No random critical hits"
+	"attributes"
+	{
+		"store crit on headshot"
+		{
+			"plugin"	"zethax-attributes"
+			"value"		"15"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+		"crit mod disabled"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0"
+		}
+		"fire rate penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.15"
+		}
+	}
+}

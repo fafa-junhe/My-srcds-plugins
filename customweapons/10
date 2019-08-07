@@ -1,0 +1,46 @@
+"Battery Charger"
+{
+	"classes"
+	{
+		"pyro"	"1"
+	}
+	"baseclass"		"shotgun_pyro"
+	"baseindex"		"15047"
+	"mag"			"6"
+	"logname"		"charger"
+	"killicon"		"tf_shotgun"
+	"description"	"Jinada +100% damage for 1 hit (cd 20 sec), Fervor (+15% AS , Max 7 stacks), Damage -25%, Fire Rate -50%, Press "Mouse2" to gain "Precision" buff for 10 seconds in cost of 50 health"
+	"attributes"
+	{
+		"addcond on hp sacrifice"
+		{
+			"plugin"	"moreaw2"
+			"value"		"50 96 10"
+		}
+		"set_item_texture_wear"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0"
+		}
+		"fire rate penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.5"
+		}
+		"fervor"
+		{
+			"plugin"	"dota2"
+			"value"		"0.15 7 1.5"
+		}
+		"jinada attr"
+		{
+			"plugin"	"dota2"
+			"value"		"2.0 20.0"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+	}
+}

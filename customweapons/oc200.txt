@@ -1,0 +1,46 @@
+"Octano-200"
+{
+	"classes"
+	{
+		"pyro"		"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"21"
+	"mag"			"200"
+	"logname"		"igniter"
+	"killicon"		"tf_thedegreaser"
+	"description"	"While Active: MS +30%, Damage +50%, no afterburn, +50% airblast cost, no ammo from dispencers"
+	"attributes"
+	{
+		"move speed bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.3"
+		}
+		"provide on active"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"airblast cost increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.5"
+		}
+		"weapon burn time reduced"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0"
+		}
+		"damage bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.5"
+		}
+		"no primary ammo from dispensers while active"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+	}
+}

@@ -1,0 +1,21 @@
+"加特林机枪"
+{
+"classes"       {
+"heavy"       "0"
+}
+ "baseclass"       "minigun"
+ "baseindex"       "15"
+ "nobots"       "1"
+ "logname"       "sad"
+ "description"       "射击速度+60%\n伤害-90%"
+ "attributes"       {
+"fire rate bonus"       {
+"plugin"       "tf2attributes"
+ "value"       ".60"
+}
+ "damage penalty"       {
+"plugin"       "tf2attributes"
+ "value"       ".05"
+}
+}
+}

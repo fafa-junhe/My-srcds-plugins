@@ -14,7 +14,9 @@ AskPluginLoad_VSH()
 
 public Native_VSHIsVSHMap(Handle:plugin, numParams)
 {
-	return IsFF2Map();
+	char mapName[64];
+	GetCurrentMap(mapName, sizeof(mapName));
+	return IsFF2Map(mapName);
 }
 
 public Native_VSHIsEnabled(Handle:plugin, numParams)

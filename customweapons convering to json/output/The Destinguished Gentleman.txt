@@ -1,0 +1,27 @@
+"The Destinguished Gentleman"
+{
+"classes"       {
+"spy"       "0"
+}
+ "baseclass"       "revolver"
+ "baseindex"       "525"
+ "logname"       "destinguished_gentleman"
+ "description"       "Combo system      伤害increases for every hit
+ third hit will minicrit
+ purge bleed+burn+fluids
+ and reset the combo\nCombo is reset upon missing\nHitting buildings does not reset your combo\n+25% switch speed\n+10% fire rate"
+ "attributes"       {
+"meet the spy combo"       {
+"plugin"       "chdata-attributes"
+ "value"       "0.6 0.8 1.0"
+}
+ "deploy time decreased"       {
+"plugin"       "tf2attributes"
+ "value"       "0.75"
+}
+ "fire rate bonus"       {
+"plugin"       "tf2attributes"
+ "value"       "0.9"
+}
+}
+}

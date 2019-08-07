@@ -1,0 +1,45 @@
+"钝化火箭筒"
+{
+"classes"       {
+"soldier"       "0"
+}
+ "baseclass"       "rocketlauncher"
+ "baseindex"       "414"
+ "nobots"       "1"
+ "quality"       "6"
+ "logname"       "battering_cannon"
+ "description"       "25% bonus push force against both enemy players and the user\n \n25% less projectile speed\n \n \nCredit      \nGeneral Stat Sugguestion\n-Sweddy\n-Karma Charger"
+ "attributes"       {
+"self dmg push force increased"       {
+"plugin"       "tf2attributes"
+ "value"       "1.25"
+}
+ "apply z velocity on damage"       {
+"plugin"       "tf2attributes"
+ "value"       "150"
+}
+ "apply look velocity on damage"       {
+"plugin"       "tf2attributes"
+ "value"       "150"
+}
+ "damage causes airblast"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+ "Projectile speed decreased"       {
+"plugin"       "tf2attributes"
+ "value"       ".75"
+}
+ "weapon_allow_inspect"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+}
+ "sound"       {
+"player"       {
+"find"       ")weapons/rocket_ll_shoot_crit.wav"
+ "replace"       "weapons/rocket_ll_shoot.wav"
+ "pitch"       "150"
+}
+}
+}

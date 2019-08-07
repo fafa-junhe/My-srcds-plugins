@@ -1,0 +1,33 @@
+"The Marauders Mace"
+{
+"classes"       {
+"soldier"       "2"
+}
+ "baseclass"       "shovel"
+ "baseindex"       "416"
+ "nobots"       "1"
+ "logname"       "marauders_mace"
+ "description"       "Performs an earthquake upon\nlanding after a Rocket Jump\nThis weapon is pretty heavy\n+20% reduced fall伤害while active\n40% slower firing speed"
+ "attributes"       {
+"earthquake on rocket jump land"       {
+"plugin"       "advanced-weaponiser-2-attributes"
+ "value"       "1"
+}
+ "fall dmg reduced"       {
+"plugin"       "advanced-weaponiser-2-attributes"
+ "value"       "0.75"
+}
+ "item is heavy"       {
+"plugin"       "advanced-weaponiser-2-attributes"
+ "value"       "10.0"
+}
+ "damage force reduction"       {
+"plugin"       "tf2attributes"
+ "value"       "0.8"
+}
+ "fire rate penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "1.4"
+}
+}
+}

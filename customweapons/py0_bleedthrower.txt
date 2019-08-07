@@ -1,0 +1,20 @@
+"The Bleedthrower"
+{
+	"classes"
+	{
+		"pyro"	"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"21"
+	"logname"		"bleedthrower"
+	"steamids"		"CHAWLZ"
+	"description"	"Inflicts Bleeding instead of Afterburn"
+	"attributes"
+	{
+		"bleed instead of burn"
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"1"
+		}
+	}
+}

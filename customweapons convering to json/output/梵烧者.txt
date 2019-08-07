@@ -1,0 +1,24 @@
+"梵烧者"
+{
+"classes"       {
+"pyro"       "0"
+}
+ "baseclass"       "flamethrower"
+ "baseindex"       "215"
+ "logname"       "firkin_flamer"
+ "description"       "按右键能喷射出一坨油 能被信号枪点燃\n-90% 燃烧时间"
+ "attributes"       {
+"alt fire is oil"       {
+"plugin"       "advanced-weaponiser-2-attributes"
+ "value"       "1"
+}
+ "weapon burn time reduced"       {
+"plugin"       "tf2attributes"
+ "value"       "0.1"
+}
+ "airblast disabled"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+}
+}

@@ -1,0 +1,41 @@
+"精准霰弹枪"
+{
+	"classes"
+	{
+		"soldier"	"1"
+		"pyro"		"1"
+		"heavy"		"1"
+		"engineer"	"0"
+	}
+	"baseclass"		"shotgun"
+	"baseindex"		"1"
+	"mag"			"3"
+	"ammo"			"32"
+	"description"	"+30%重装速度\n-50% 弹夹容量\n+30%射击速度"
+	"attributes"
+	{
+		"Reload time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.3"
+		}
+		"clip size penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.5"
+		}
+		"fire rate bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.3"
+		}
+	}
+	"viewmodel"
+	{
+		"modelname"		"models/weapons/c_models/c_trenchgun/c_trenchgun.mdl"
+	}
+	"worldmodel"
+	{
+		"modelname"		"models/weapons/c_models/c_trenchgun/c_trenchgun.mdl"
+	}
+}

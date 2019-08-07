@@ -1,0 +1,61 @@
+"水中霸王"
+{
+	"classes"
+	{
+		"heavy"		"2"
+	}
+	"baseclass"		"fists"
+	"baseindex"		"331"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"jaws_of_steel"
+	"description"	"在水里/被尿/被牛奶时:\n+25%移动速度\n+25%伤害\n+25%攻击速度\n不在水里/被尿/被牛奶时:\n-50%移动速度\n-25%伤害-25%攻击速度"
+	"cw3_attributes"
+	{
+		"single wep deploy time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.5"
+		}
+		"single wep holster time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.5"
+		}
+"swim speed increased"
+{
+"plugin""rays-attributes"
+"value""1.25"
+}
+"move speed decrease while not swimming"
+{
+"plugin""rays-attributes"
+"value""0.5"
+}
+"damage while swimming increased"
+{
+"plugin""rays-attributes"
+"value""1.25"
+}
+"damage while not swimming decreased"
+{
+"plugin""rays-attributes"
+"value""0.75"
+}
+"attack speed increased while swimming"
+{
+"plugin""rays-attributes"
+"value""0.75"
+}
+"attack speed decreased while not swimming"
+{
+"plugin""rays-attributes"
+"value""1.25"
+}
+		"weapon_allow_inspect"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+	}
+}

@@ -1,0 +1,35 @@
+"Greater Basher"
+{
+	"classes"
+	{
+		"pyro"		"2"
+	}
+	"baseclass"		"fireaxe"
+	"baseindex"		"214"
+	"logname"		"redaxe"
+	"killicon"		"fireaxe"
+	"description"	"Damage -25%, MS -10%, AS +15%, 17% to Bash and knockback the enemy, Bash will deal 100 damage and stun for 1.4 sec"
+	"attributes"
+	{
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+		"melee attack rate bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.85"
+		}
+		"move speed penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.9"
+		}
+		"chance to bash"
+		{
+			"plugin"	"dota2"
+			"value"		"0.17 1.4 100 1"
+		}
+	}
+}

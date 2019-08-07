@@ -1,0 +1,51 @@
+"吊首者"
+{
+	"classes"
+	{
+		"spy"		"4"
+	}
+	"baseclass"		"invis"
+	"baseindex"		"30"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"plot_hook"
+	"description"	"手表在隐身的同时挂在墙上或者天花板上\n隐身时移除所有负面效果\n \n无法拿情报\n \n \nCredit:\nGeneral Stat Sugguestion\n-Advanced Weaponiser\nCustom Attribute\n-Zethax\n-Theray\n \nDefault *Invis Watch* Model"
+	"cw3_attributes"
+	{
+		"cloak is hook"
+		{
+			"plugin"	"aw2attrib"
+			"value"		"1"
+		}
+		"remove negative status while cloaked"
+		{
+			"plugin"	"zethax-ctf2w"
+			"value"		"1"
+		}
+		"cannot pick up intelligence"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"mult cloak rate"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"-.9"
+		}
+		"mult decloak rate"
+		{
+			"plugin"	"tf2attributes"
+			"value"		".1"
+		}
+		"SET BONUS: cloak blink time penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+	}
+}

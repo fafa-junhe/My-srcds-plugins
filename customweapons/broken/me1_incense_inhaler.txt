@@ -1,0 +1,45 @@
+"The Incense Inhaler"
+{
+	"classes"
+	{
+		"medic"		"1"
+	}
+	"baseclass"		"medigun"
+	"baseindex"		"35"
+	"logname"		"incense_inhaler"
+	"steamids"		"girl"
+	"description"	"On taunt: Deal and take minicrits for 15 sec\nCannot heal\nThis weapon is useable in medieval mode"
+	"attributes"
+	{
+		"taunt for tfcond"
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"icondbuffed 15.0"
+		}
+		"taunt for tfcond"
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"icondmarkfordeath 15.0"
+		}
+		"disable primary attack"
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"1"
+		}
+		"disable secondary attack"
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"1"
+		}
+		"allowed in medieval mode"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"special taunt"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+	}
+}

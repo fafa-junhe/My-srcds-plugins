@@ -1,0 +1,34 @@
+"灌肠弓"
+{
+"classes"       {
+"sniper"       "0"
+}
+ "baseclass"       "compound_bow"
+ "baseindex"       "56"
+ "nobots"       "1"
+ "quality"       "6"
+ "logname"       "penetrator"
+ "description"       "箭最多能弹射两次 能穿透敌人\n射箭的时候-50%\n速度-25%射击速度"
+ "cw3_attributes"       {
+"projectiles bounce"       {
+"plugin"       "advanced-weaponiser-2-attributes"
+ "value"       "2"
+}
+ "projectile penetration"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+ "fire rate penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "1.25"
+}
+ "sniper aiming movespeed decreased"       {
+"plugin"       "tf2attributes"
+ "value"       ".5"
+}
+ "weapon_allow_inspect"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+}
+}

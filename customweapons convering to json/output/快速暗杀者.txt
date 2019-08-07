@@ -1,0 +1,31 @@
+"快速暗杀者"
+{
+"classes"       {
+"sniper"       "0"
+}
+ "baseclass"       "sniperrifle"
+ "baseindex"       "14"
+ "mag"       "25"
+ "ammo"       "25"
+ "description"       "部署时间(拿出武器时间)-35%\n充能速度-20%\n最大生命-15%"
+ "attributes"       {
+"deploy time decreased"       {
+"plugin"       "tf2attributes"
+ "value"       "0.35"
+}
+ "SRifle Charge rate decreased"       {
+"plugin"       "tf2attributes"
+ "value"       "0.2"
+}
+ "max health additive penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "-15"
+}
+}
+ "viewmodel"       {
+"modelname"       "models/weapons/c_models/c_highnoon/c_highnoon.mdl"
+}
+ "worldmodel"       {
+"modelname"       "models/weapons/c_models/c_highnoon/c_highnoon.mdl"
+}
+}

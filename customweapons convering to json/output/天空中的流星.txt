@@ -1,0 +1,32 @@
+"天空中的流星"
+{
+"classes"       {
+"scout"       "0"
+}
+ "baseclass"       "scattergun"
+ "baseindex"       "13"
+ "nobots"       "1"
+ "quality"       "6"
+ "logname"       "sad"
+ "description"       "-90%伤害\n眩晕效果\n仅有两颗子弹\n装弹时间+200%"
+ "cw3_attributes"       {
+"stun on hit"       {
+"plugin"       "orion"
+ "value"       "1 1"
+}
+}
+ "attributes"       {
+"damage penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "0.1"
+}
+ "clip size penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "0.25"
+}
+ "Reload time increased"       {
+"plugin"       "tf2attributes"
+ "value"       "3"
+}
+}
+}

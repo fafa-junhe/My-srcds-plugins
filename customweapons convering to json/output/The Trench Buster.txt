@@ -1,0 +1,32 @@
+"The Trench Buster"
+{
+"classes"       {
+"soldier"       "0"
+}
+ "baseclass"       "rocketlauncher"
+ "baseindex"       "127"
+ "mag"       "2"
+ "ammo"       "20"
+ "logname"       "trench_buster"
+ "description"       "(+) Carry 3 special rocket types with this equipped      \n* HE Rockets (Big Blast
+ Slightly Higher dmg
+ slower projectile)\n* AP Rockets (High Dmg
+ Higher dmg vs buildings
+ more dmg to self)\n* APCR Rockets (Faster reload
+ faster projectile
+ slightly smaller blast)\n(+) Press your Special Attack key to switch between explosive types\n \n(-) Requires clip to be empty before being able to load new rockets\n(-) 50% Smaller 弹夹大小"
+ "attributes"       {
+"mortar mechanic"       {
+"plugin"       "zethax-attributes"
+ "value"       "1"
+}
+ "clip size penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "0.5"
+}
+ "crit mod disabled"       {
+"plugin"       "tf2attributes"
+ "value"       "0"
+}
+}
+}

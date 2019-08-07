@@ -1,0 +1,42 @@
+"Shotgun Bride"
+{
+	"classes"
+	{
+		"scout"		"0"
+	}
+	"baseclass"		"shotgun_building_rescue"
+	"baseindex"		"525"
+	"nobots"		"1"
+	"mag"			"0"
+	"logname"		"shotgun_bride"
+	"killicon"		"scattergun"
+	"description"	"Hold Fire to load up your clip\nRelease Fire to unleash the barrage\n15% slower reload time\n-50% clip size"
+	"attributes"
+	{
+		"auto fires full clip"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+        "Reload time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.15"
+		}
+		"clip size penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.5"
+		}
+        "fire rate bonus"
+        {
+            "plugin"	"tf2attributes"
+			"value"		"0.1"
+        }
+        "override projectile type"
+        {
+            "plugin"	"tf2attributes"
+			"value"		"18"
+        }
+	}
+}

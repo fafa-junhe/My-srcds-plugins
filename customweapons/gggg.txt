@@ -1,0 +1,48 @@
+"间谍打手"
+{
+	"classes"
+	{
+		"pyro"	"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"21"
+	"nobots"		"1"
+	"logname"		"sad"
+	"description"		"伤害-25%\n对隐身的间谍产生暴击"
+	"cw3_attributes"
+    {
+        "crit vs invisible players"
+        {
+            "plugin"   "orion"
+            "value"     "1"
+        }
+    }
+    "attributes"
+    {
+        "damage penalty"
+        {
+            "plugin"    "tf2attributes"
+            "value" ".75"
+        }
+        "weapon burn dmg increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}	
+		"weapon burn time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"extinguish restores health"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"10"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+    }
+}

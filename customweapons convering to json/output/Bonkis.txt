@@ -1,0 +1,33 @@
+"Bonkis"
+{
+"classes"       {
+"scout"       "2"
+}
+ "baseclass"       "bat"
+ "baseindex"       "450"
+ "logname"       "bonkis"
+ "killicon"       "tf_atomizer"
+ "description"       "+322% STUPIDITY AND AUTISM. \nFury swipes (+15 dmg per \nstack/6 stacks/7 sec) + Overpower for 3 sec or 6 hits \n(cd 15 sec). Honorbound \nWeapon. No Doublejump. Move \nSpeed -35%"
+ "attributes"       {
+"fury swipe"       {
+"plugin"       "dota2"
+ "value"       "15 6 7"
+}
+ "overpower"       {
+"plugin"       "dota2"
+ "value"       "0.6 3.0 6 15.0 1.0"
+}
+ "honorbound"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+ "no double jump"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+ "move speed penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "0.65"
+}
+}
+}

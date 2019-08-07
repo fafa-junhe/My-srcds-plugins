@@ -1,0 +1,32 @@
+"The Industrialist"
+{
+	"classes"
+	{
+		"scout"		"0"
+	}
+	"baseclass"		"scattergun"
+	"baseindex"		"13"
+	"mag"			"6"
+	"ammo"			"16"
+	"logname"		"industrialist"
+	"killicon"		"scattergun"
+	"description"	"(+) On kill: Reload clip instantly and gain 25% of your primary weapon ammo back\n(+) On kill: 20% Faster firing speed for 2 seconds\n \n(-) 33% Slower reload speed\n(-) 50% Less maximum primary ammo carried\n(-) This weapon cannot gain ammo from packs or dispensers"
+	"attributes"
+	{
+		"refill clip on kill"
+		{
+			"plugin"	"custom-attributes"
+			"value" 	"6 16 4 0.8"
+		}
+		"faster reload rate"
+		{
+			"plugin"	"tf2attributes"
+			"value" 	"1.33"
+		}
+		"maxammo primary reduced"
+		{
+			"plugin"	"tf2attributes"
+			"value" 	"0.0"
+		}
+	}
+}

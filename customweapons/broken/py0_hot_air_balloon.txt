@@ -1,0 +1,24 @@
+"The Hot Air Balloon"
+{
+	"classes"
+	{
+		"pyro"		"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"30474"
+	"logname"		"hot_air_balloon"
+	"description"	"Float through the air while firing\n+100% ammo consumption rate"
+	"attributes"
+	{
+		"float while firing"
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"1"
+		}
+		"flame ammopersec increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"2.0"
+		}
+	}
+}

@@ -1,0 +1,35 @@
+"Vampire's Analyzes"
+{
+	"classes"
+	{
+		"sniper"	"1"
+	}
+	"baseclass"		"jar"
+	"baseindex"		"58"
+	"logname"		"piss"
+	"killicon"		"tf_jarate"
+	"description"	"On hit: Applies Jarate and Madmilk, 25% Slower Recharge time, Mark of Death for 12 sec, No Healing from Packs and Medics"
+	"attributes"
+	{
+		"hot sauce"
+		{
+			"plugin"	"orion"
+			"value"		"3"
+		}
+		"effect bar recharge rate increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.25"
+		}
+		"self mark for death"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"12"
+		}
+		"healing received penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.0"
+		}
+	}
+}

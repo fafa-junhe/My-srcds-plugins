@@ -1,0 +1,28 @@
+"狼牙棒"
+{
+"classes"       {
+"scout"       "2"
+}
+ "baseclass"       "bat"
+ "baseindex"       "325\t"
+ "nobots"       "1"
+ "quality"       "6"
+ "logname"       "sad"
+ "description"       "击中后给目标5秒尿瓶效果\n击中后给目标5秒牛奶效果\n击中后给目标5秒流血效果\n没挥中会击中自己(自己的效果时间+2)"
+ "cw3_attributes"       {
+"hotsauce on hit"       {
+"plugin"       "orion"
+ "value"       "5 7"
+}
+ "hotsauce yourself on miss"       {
+"plugin"       "tf2attributes"
+ "value"       "7 7"
+}
+}
+ "attributes"       {
+"hit self on miss"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+}
+}

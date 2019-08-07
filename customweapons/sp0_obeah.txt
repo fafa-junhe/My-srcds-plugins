@@ -1,0 +1,29 @@
+"Obeah"
+{
+	"classes"
+	{
+		"spy"	"0"
+	}
+	"baseclass"		"revolver"
+	"baseindex"		"525"
+	"logname"		"obeah"
+	"description"	"On Hit From Behind: Marks for death for 5 seconds-50% clip size-10% damage penalty"
+	"attributes"
+	{
+		"backattack addcond"
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"condmarkfordeath 5.0"
+		}
+		"clip size penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.5"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.9"
+		}
+	}
+}

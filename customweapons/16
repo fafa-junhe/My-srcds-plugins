@@ -1,0 +1,42 @@
+"Boston Rules"
+{
+	"classes"
+	{
+		"scout"		"0"
+	}
+	"baseclass"		"scattergun"
+	"baseindex"		"15053"
+	"mag"			"8"
+	"ammo"			"32"
+	"logname"		"bostonrule"
+	"killicon"		"scattergun"
+	"description"	"-60% Fire Rate, -25% Damage, Clip Size +33%, Overpower: +220% fire rate for 8 shots or 7 seconds (Cooldown 14 sec.)"
+	"attributes"
+	{
+		"fire rate penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.5"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+		"clip size bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.33"
+		}
+		"overpower"
+		{
+			"plugin"	"dota2"
+			"value"		"2.2 7.0 8 14.0 1.5"
+		}
+		"set_item_texture_wear"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0"
+		}
+	}
+}

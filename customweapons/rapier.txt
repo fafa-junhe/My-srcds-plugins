@@ -1,0 +1,45 @@
+"Divine Rapier"
+{
+	"classes"
+	{
+		"demoman"	"2"
+	}
+	"baseclass"		"sword"
+	"baseindex"		"132"
+	"logname"		"rapier"
+	"killicon"		"sword"
+	"description"	"+330 Damage, Speed buff on hit, +3 sec charge duration, -35% MS, -40% AS, 30% Longer Weapon Switch"
+	"attributes"
+	{
+		"charge time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"3"
+		}
+		"damage bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"6.08"
+		}
+		"move speed penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.65"
+		}
+		"speed buff ally"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"melee attack rate bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.4"
+		}
+		"deploy time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.3"
+		}
+	}
+}

@@ -1,0 +1,50 @@
+"The Quickie Launcher"
+{
+	"classes"
+	{
+		"demoman"	"1"
+	}
+	"baseclass"		"pipebomblauncher"
+	"baseindex"		"20"
+	"mag"			"2"
+	"ammo"			"24"
+	"description"	"+50% faster firing speed\n-0.4 sec faster bomb arm time\n-20% damage penalty\n-75% clip size\n-20% explosion radius\n-6 max pipebombs out\n+100% damage to self"
+	"attributes"
+	{
+		"fire rate bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.5"
+		}
+		"sticky arm time bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"-0.4"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.8"
+		}
+		"clip size penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.25"
+		}
+		"Blast radius decreased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.8"
+		}
+		"max pipebombs decreased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"-6"
+		}
+		"blast dmg to self increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"2.0"
+		}
+	}
+}

@@ -1,0 +1,33 @@
+"Black Lightning"
+{
+"classes"       {
+"engineer"       "1"
+}
+ "baseclass"       "pistol"
+ "baseindex"       "15046"
+ "mag"       "12"
+ "ammo"       "200"
+ "logname"       "light"
+ "killicon"       "pistol"
+ "description"       "Respawn if meter is 100% 
+ Press Mouse2 to add condition Haste for 35 hp 
+ -30% damage"
+ "attributes"       {
+"addcond on hp sacrifice"       {
+"plugin"       "moreaw2"
+ "value"       "35 91 4"
+}
+ "set_item_texture_wear"       {
+"plugin"       "tf2attributes"
+ "value"       "0"
+}
+ "respawn where you died"       {
+"plugin"       "moreaw2"
+ "value"       "16 5.0"
+}
+ "damage penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "0.7"
+}
+}
+}

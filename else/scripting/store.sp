@@ -5,9 +5,9 @@
 //////////////////////////////
 
 #define PLUGIN_NAME "Store - The Resurrection"
-#define PLUGIN_AUTHOR "Zephyrus,synergy&insurgency fixed:Gunslinger,Chinese translation:Kud."
+#define PLUGIN_AUTHOR "Zephyrus"
 #define PLUGIN_DESCRIPTION "A completely new Store system."
-#define PLUGIN_VERSION "1.1fix"
+#define PLUGIN_VERSION "1.1"
 #define PLUGIN_URL ""
 
 #define SERVER_LOCK_IP ""
@@ -77,14 +77,12 @@ new GAME_DOD = false;
 new GAME_TF2 = false;
 new GAME_L4D = false;
 new GAME_L4D2 = false;
-new GAME_SYN = false;
 
 new String:g_szGameDir[64];
 
 new Handle:g_hDatabase = INVALID_HANDLE;
 new Handle:g_hAdminMenu = INVALID_HANDLE;
 new Handle:g_hLogFile = INVALID_HANDLE;
-new Handle:g_hCustomCredits = INVALID_HANDLE;
 
 new g_cvarDatabaseEntry = -1;
 new g_cvarDatabaseRetries = -1;
@@ -169,6 +167,7 @@ new SilentChatTrigger = 0;
 #include "store/invisibility.sp"
 #include "store/commands.sp"
 #include "store/doors.sp"
+#include "store/knife.sp"
 #include "store/zrclass.sp"
 #include "store/jihad.sp"
 #include "store/godmode.sp"
@@ -177,9 +176,8 @@ new SilentChatTrigger = 0;
 #include "store/respawn.sp"
 #include "store/pets.sp"
 #include "store/sprays.sp"
+#include "store/weaponskins.sp"
 #include "store/admin.sp"
-#include "store/glow.sp"
-#include "store/synsupport.sp"
 #endif
 
 //////////////////////////////////
@@ -224,12 +222,10 @@ public OnPluginStart()
 		GAME_DOD = true;
 	else if(strcmp(g_szGameDir, "tf")==0)
 		GAME_TF2 = true;
-	else if(strcmp(g_szGameDir, "left4dead")==0)
+	else if(strcmp(g_szGameDir, "l4d")==0)
 		GAME_L4D = true;
-	else if(strcmp(g_szGameDir, "left4dead2")==0)
+	else if(strcmp(g_szGameDir, "l4d2")==0)
 		GAME_L4D2 = true;
-	else if(strcmp(g_szGameDir, "synergy")==0)
-		GAME_SYN = true;
 	else
 	{
 		SetFailState("This game is not be supported. Please contact the author for support.");
@@ -282,7 +278,6 @@ public OnPluginStart()
 	RegConsoleCmd("sm_givecredits", Command_GiveCredits);
 	RegConsoleCmd("sm_resetplayer", Command_ResetPlayer);
 	RegConsoleCmd("sm_credits", Command_Credits);
-	RegServerCmd("sm_store_custom_credits", Command_CustomCredits);
 	
 	// Hook events
 	HookEvent("player_death", Event_PlayerDeath);
@@ -322,23 +317,20 @@ public OnPluginStart()
 	Doors_OnPluginStart();
 	ZRClass_OnPluginStart();
 	Jihad_OnPluginStart();
+	Knives_OnPluginStart();
 	Godmode_OnPluginStart();
 	Sounds_OnPluginStart();
 	Attributes_OnPluginStart();
 	Respawn_OnPluginStart();
 	Pets_OnPluginStart();
 	Sprays_OnPluginStart();
+	WeaponSkins_OnPluginStart();
 	AdminGroup_OnPluginStart();
-	Glow_OnPluginStart();
-	SYNSupport_OnPluginStart();
 #endif
 
 	new Handle:topmenu;
 	if (LibraryExists("adminmenu") && ((topmenu = GetAdminTopMenu()) != INVALID_HANDLE))
 		OnAdminMenuReady(topmenu);
-
-	// Initialize handles
-	g_hCustomCredits = CreateArray(3);
 
 	// Load the config file
 	Store_ReloadConfig();
@@ -1056,7 +1048,6 @@ public OnClientConnected(client)
 	ZRClass_OnClientConnected(client);
 	Pets_OnClientConnected(client);
 	Sprays_OnClientConnected(client);
-	Glow_OnClientConnected(client);
 #endif
 }
 
@@ -1073,6 +1064,8 @@ public OnClientPutInServer(client)
 	if(IsFakeClient(client))
 		return;
 	WeaponColors_OnClientPutInServer(client);
+	Knives_OnClientPutInServer(client);
+	WeaponSkins_OnClientPutInServer(client);
 }
 #endif
 
@@ -1084,7 +1077,6 @@ public OnClientDisconnect(client)
 #if !defined STANDALONE_BUILD
 	Betting_OnClientDisconnect(client);
 	Pets_OnClientDisconnect(client);
-	Glow_OnClientDisconnect(client);
 #endif
 
 	Store_SaveClientData(client);
@@ -1139,10 +1131,13 @@ public Action:Event_PlayerDeath(Handle:event, const String:name[], bool:dontBroa
 
 	if(g_eCvars[g_cvarCreditAmountKill][aCache])
 	{
-		g_eClients[attacker][iCredits] += GetMultipliedCredits(attacker, g_eCvars[g_cvarCreditAmountKill][aCache]);
-		if(g_eCvars[g_cvarCreditMessages][aCache])
-			Chat(attacker, "%t", "Credits Earned For Killing", g_eCvars[g_cvarCreditAmountKill][aCache], g_eClients[victim][szName]);
-		Store_LogMessage(attacker, g_eCvars[g_cvarCreditAmountKill][aCache], "Earned for killing");
+        if(GetClientCount() >= 10)
+        {
+            g_eClients[attacker][iCredits] += g_eCvars[g_cvarCreditAmountKill][aCache];
+            if(g_eCvars[g_cvarCreditMessages][aCache])
+                Chat(attacker, "%t", "Credits Earned For Killing", g_eCvars[g_cvarCreditAmountKill][aCache], g_eClients[victim][szName]);
+            Store_LogMessage(attacker, g_eCvars[g_cvarCreditAmountKill][aCache], "Earned for killing");
+        }
 	}
 		
 	return Plugin_Continue;
@@ -1443,42 +1438,6 @@ public Action:Command_Credits(client, params)
 		g_iSpam[client] = GetTime()+30;
 	}
 	
-	return Plugin_Handled;
-}
-
-public Action:Command_CustomCredits(params)
-{
-	if(params < 2)
-	{
-		PrintToServer("sm_store_custom_credits [flag] [multiplier]");
-		return Plugin_Handled;
-	}
-
-	new String:tmp[16];
-	GetCmdArg(1, STRING(tmp));
-	new flag = ReadFlagString(tmp);
-	GetCmdArg(2, STRING(tmp));
-	new Float:mult = StringToFloat(tmp);
-
-	new size = GetArraySize(g_hCustomCredits);
-	new index = -1;
-	for(new i=0;i<size;++i)
-	{
-		new sflag = GetArrayCell(g_hCustomCredits, i, 0);
-		if(sflag == flag)
-		{
-			index = i;
-			break;
-		}
-	}
-
-	if(index == -1)
-	{
-		index = PushArrayCell(g_hCustomCredits, flag);
-	}
-
-	SetArrayCell(g_hCustomCredits, index, mult, 1);
-
 	return Plugin_Handled;
 }
 
@@ -2098,25 +2057,6 @@ public ConVar_CreditTimer(index)
 //			TIMERS	 		//
 //////////////////////////////
 
-public GetMultipliedCredits(client, amount)
-{
-	new flags = GetUserFlagBits(client);
-	new size = GetArraySize(g_hCustomCredits);
-	new Float:multiplier = 1.0;
-	for(new i=0;i<size;++i)
-	{
-		if(GetClientPrivilege(client, GetArrayCell(g_hCustomCredits, i, 0), flags))
-		{
-			new Float:mul = GetArrayCell(g_hCustomCredits, i, 1);
-
-			if(multiplier < mul)
-				multiplier = mul;
-		}
-	}
-
-	return RoundFloat(amount * multiplier);
-}
-
 public Action:Timer_CreditTimer(Handle:timer, any:userid)
 {
 	new client = GetClientOfUserId(userid);
@@ -2124,20 +2064,14 @@ public Action:Timer_CreditTimer(Handle:timer, any:userid)
 		return Plugin_Continue;
 	
 	decl m_iCredits;
-	new team = GetClientTeam(client);
-	if(2<=team<=3)
+
+	if(2<=GetClientTeam(client)<=3)
 		m_iCredits = g_eCvars[g_cvarCreditAmountActive][aCache];
 	else
 		m_iCredits = g_eCvars[g_cvarCreditAmountInactive][aCache];
 
-	m_iCredits = GetMultipliedCredits(client, m_iCredits);
-
 	if(m_iCredits)
 	{
-		g_eClients[client][iCredits] += m_iCredits;
-		if(g_eCvars[g_cvarCreditMessages][aCache])
-			Chat(client, "%t", "Credits Earned For Playing", m_iCredits);
-		Store_LogMessage(client, m_iCredits, "Earned for playing");
 	}
 
 	return Plugin_Continue;

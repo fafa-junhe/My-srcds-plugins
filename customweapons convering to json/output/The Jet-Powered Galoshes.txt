@@ -1,0 +1,21 @@
+"The Jet-Powered Galoshes"
+{
+"classes"       {
+"soldier"       "1"
+}
+ "baseclass"       "tf_wearable"
+ "baseindex"       "133"
+ "logname"       "jet_powered_galoshes"
+ "steamids"       "chawlz"
+ "description"       "Hold Space to hover mid-air for up to 2.5 seconds\n+25% fall伤害vulnerability on wearer"
+ "attributes"       {
+"hover time"       {
+"plugin"       "chdata-attributes"
+ "value"       "2.5"
+}
+ "fall dmg mult"       {
+"plugin"       "chdata-attributes"
+ "value"       "1.25"
+}
+}
+}

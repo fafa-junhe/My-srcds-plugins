@@ -1,0 +1,39 @@
+"Bodyshooter"
+{
+"classes"       {
+"sniper"       "0"
+}
+ "baseclass"       "sniperrifle"
+ "baseindex"       "752"
+ "mag"       "25"
+ "logname"       "bshooter"
+ "killicon"       "\t\t"
+ "description"       "充能速度 -60%
+ 射击速度 -50%
+ +50%伤害on bodyshot
+ Cannot fire without scoping
+ 20% to bash
+ knockback for 0.4 sec and deal 100 bonus damage"
+ "attributes"       {
+"fire rate penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "1.5"
+}
+ "SRifle Charge rate decreased"       {
+"plugin"       "tf2attributes"
+ "value"       "0.4"
+}
+ "damage penalty on bodyshot"       {
+"plugin"       "tf2attributes"
+ "value"       "1.5"
+}
+ "sniper only fire zoomed"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+ "bash"       {
+"plugin"       "dota2"
+ "value"       "0.2 0.4 100"
+}
+}
+}

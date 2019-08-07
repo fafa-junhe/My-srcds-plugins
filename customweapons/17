@@ -1,0 +1,61 @@
+"Caesium Engine"
+{
+	"classes"
+	{
+		"pyro"		"0"
+	}
+	"baseclass"		"flamethrower"
+	"baseindex"		"15054"
+	"mag"			"200"
+	"logname"		"caesium"
+	"killicon"		"tf_flamethrower"
+	"description"	"On active: Fires with Green Flames (requires tf_force_holiday 2), +60% Damage bonus if enemy's health higher than 50%, +20% Damage bonus if enemy's health lower than 50%, 10% of damage returns to you, Passively deals 30 dmg per second in 500 AoE (works even the weapon insn't active), Move speed -20%"
+	"attributes"
+	{
+		"move speed penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.8"
+		}
+		"provide on active"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"bonus dmg if enemy hp higher than value"
+		{
+			"plugin"	"orion"
+			"value"		"1.6 0.5"
+		}
+		"bonus dmg if enemy hp below value"
+		{
+			"plugin"	"orion"
+			"value"		"1.2 0.5"
+		}
+		"dmg done is selfhurt"
+		{
+			"plugin"	"orion"
+			"value"		"0.1"
+		}
+		"dmg nearby enemies"
+		{
+			"plugin"	"orion"
+			"value"		"30 500 1.0"
+		}
+		"set item tint RGB"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"3329330"
+		}
+		"SPELL: Halloween green flames"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"set_item_texture_wear"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0"
+		}
+	}
+}

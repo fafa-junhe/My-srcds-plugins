@@ -5,8 +5,8 @@
 #include <multicolors>
 #undef REQUIRE_PLUGIN
 #include <sourcebanspp>
-#tryinclude <KZTimer>
-
+#tryinclude <kztimer>
+#include <afk_manager>
 // ====[ DEFINES ]=============================================================
 #define PLUGIN_NAME "Custom Votes"
 #define PLUGIN_VERSION "1.16.4U-dev"
@@ -29,6 +29,7 @@ new g_iCurrentVoteIndex;
 new g_iCurrentVoteTarget;
 new g_iCurrentVoteMap;
 new g_iCurrentVoteOption;
+new iAfkTime;
 new g_iVoteType[MAX_VOTE_TYPES];
 new g_iVoteDelay[MAX_VOTE_TYPES];
 new g_iVoteCooldown[MAX_VOTE_TYPES];
@@ -54,6 +55,7 @@ new bool:g_bVoteForOption[MAXPLAYERS + 1][MAX_VOTE_TYPES][MAX_VOTE_OPTIONS];
 new bool:g_bVoteForSimple[MAXPLAYERS + 1][MAX_VOTE_TYPES];
 new bool:g_bKzTimer = false;
 new bool:g_bSourceBans = false;
+new bool:g_bAfkManager = false;
 //new bool:g_bMapEnded = false;
 new Float:g_flVoteRatio[MAX_VOTE_TYPES];
 new String:g_strVoteName[MAX_VOTE_TYPES][MAX_NAME_LENGTH];
@@ -78,12 +80,15 @@ new Handle:CvarAutoBanEnabled;
 new Handle:CvarAutoBanWarning;
 new Handle:CvarAutoBanDuration;
 new Handle:CvarAutoBanType;
+new Handle:CvarAfkTime;
+new Handle:CvarAfkManager;
 new Handle:CvarCancelVoteGameEnd;
 new bool:bDebugMode;
 new bool:bResetOnWaveFailed;
 new bool:bAutoBanEnabled;
 new bool:bAutoBanWarning;
 new bool:bAutoBanType;
+new bool:bAfkManagerEnable;
 new bool:bCancelVoteGameEnd;
 new iAutoBanDuration;
 new bool:IsTF2 = false;
@@ -128,8 +133,11 @@ public OnPluginStart()
 	HookConVarChange( CvarCancelVoteGameEnd, OnConVarChanged );
 	CvarDebugMode = CreateConVar("sm_cv_debug", "0", "Enable debug mode?", FCVAR_NONE, true, 0.0, true, 1.0); // Debug mode
 	HookConVarChange( CvarDebugMode, OnConVarChanged );
+	CvarAfkManager = CreateConVar("sm_cv_afkenable", "0", "Enable Afk players are no longer counted in the total?", FCVAR_NONE, true, 0.0, true, 1.0); //Enable Afk players are no longer counted in the total?
+	HookConVarChange( CvarAfkManager, OnConVarChanged );
+	CvarAfkTime = CreateConVar("sm_cv_afktime", "10", "How long (Seconds) Afk players are no longer counted in the total?", FCVAR_NONE, true, 0.0, true, 1000.0); //How long Afk players are no longer counted in the total?
+	HookConVarChange( CvarAfkTime, OnConVarChanged );
 	
-
 	RegAdminCmd("sm_customvotes_reload", Command_Reload, ADMFLAG_ROOT, "Reloads the configuration file (Clears all votes)");
 	RegAdminCmd("sm_votemenu", Command_ChooseVote, 0, "Opens the vote menu");
 
@@ -216,6 +224,8 @@ public OnConVarChanged( Handle:hConVar, const String:strOldValue[], const String
 	iAutoBanDuration = GetConVarInt( CvarAutoBanDuration );
 	bCancelVoteGameEnd = GetConVarBool( CvarCancelVoteGameEnd );
 	bDebugMode = GetConVarBool( CvarDebugMode );
+	bAfkManagerEnable = GetConVarBool( CvarAfkManager );
+	iAfkTime = GetConVarBool( CvarAfkTime );
 }
 
 stock DetectGame()
@@ -250,6 +260,10 @@ public OnLibraryAdded(const String:szName[])
 	{
 		g_bSourceBans = true;
 	}
+	if (StrEqual(szName, "afkmanager"))
+	{
+		g_bAfkManager = true;
+	}
 }
 
 public OnLibraryRemoved(const String:szName[])
@@ -262,6 +276,10 @@ public OnLibraryRemoved(const String:szName[])
 	if (StrEqual(szName, "sourcebans++"))
 	{
 		g_bSourceBans = false;
+	}
+	if (StrEqual(szName, "afkmanager"))
+	{
+		g_bAfkManager = false;
 	}
 }
 
@@ -566,6 +584,7 @@ public Menu_ChooseVote(iVoter)
 	{
 		if (IsClientInGame(i) && g_bKzTimer)
 		{
+			KZTimer_StopUpdatingOfClimbersMenu(i);
 		}
 	}
 
@@ -695,6 +714,7 @@ public Menu_PlayersVote(iVote, iVoter)
 	{
 		if (IsClientInGame(i) && g_bKzTimer)
 		{
+			KZTimer_StopUpdatingOfClimbersMenu(i);
 		}
 	}
 
@@ -803,28 +823,45 @@ public Vote_Players(iVote, iVoter, iTarget)
 
 	new iPlayers[MAXPLAYERS + 1];
 	new iTotal;
-
-	for(new i = 1; i <= MaxClients; i++)
+	if (bAfkManagerEnable && g_bAfkManager)
 	{
-		g_bVoteForTarget[i][iVote][iTarget] = false;
-		if(IsClientInGame(i) && !IsFakeClient(i) && i != iTarget)
+		for(new i = 1; i <= MaxClients; i++)
 		{
-			if(g_bVotePlayersTeam[iVote])
+			g_bVoteForTarget[i][iVote][iTarget] = false;
+			if(IsClientInGame(i) && !IsFakeClient(i) && i != iTarget && !IsAFKClient(i))
 			{
-				if(GetClientTeam(i) == GetClientTeam(iVoter))
+				if(g_bVotePlayersTeam[iVote])
+				{
+					if(GetClientTeam(i) == GetClientTeam(iVoter))
+					iPlayers[iTotal++] = i;
+				}
+				else
 					iPlayers[iTotal++] = i;
 			}
-			else
-				iPlayers[iTotal++] = i;
 		}
 	}
-
+	else
+	{
+		for(new i = 1; i <= MaxClients; i++)
+		{
+			g_bVoteForTarget[i][iVote][iTarget] = false;
+			if(IsClientInGame(i) && !IsFakeClient(i) && i != iTarget)
+			{
+				if(g_bVotePlayersTeam[iVote])
+				{
+					if(GetClientTeam(i) == GetClientTeam(iVoter))
+					iPlayers[iTotal++] = i;
+				}
+				else
+					iPlayers[iTotal++] = i;
+			}
+		}
+	}
 	if(g_iVoteMinimum[iVote] > iTotal || iTotal <= 0)
 	{
 		CPrintToChat(iVoter, "%t", "Not Enough Valid Clients");
 		return;
 	}
-
 	if(g_strVoteStartNotify[iVote][0]) // Vote Start Notify
 	{
 		decl String:strNotification[255];
@@ -894,10 +931,17 @@ public Vote_Players(iVote, iVoter, iTarget)
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
-
-	AddMenuItem(hMenu, "Yes", "Yes");
+	
+	if(GetRandomInt(1, 2) == 1)
+	{
+		AddMenuItem(hMenu, "Yes", "Yes");
+		AddMenuItem(hMenu, "No", "No");
+	}
+	else
+	{
 	AddMenuItem(hMenu, "No", "No");
-
+	AddMenuItem(hMenu, "Yes", "Yes");
+	}
 	g_iCurrentVoteIndex = iVote;
 	g_iCurrentVoteTarget = iTarget;
 
@@ -1089,6 +1133,7 @@ public Menu_MapVote(iVote, iVoter)
 	{
 		if (IsClientInGame(i) && g_bKzTimer)
 		{
+			KZTimer_StopUpdatingOfClimbersMenu(i);
 		}
 	}
 
@@ -1203,14 +1248,28 @@ public Vote_Map(iVote, iVoter, iMap)
 
 	new iPlayers[MAXPLAYERS + 1];
 	new iTotal;
-
-	for(new i = 1; i <= MaxClients; i++)
+	if (bAfkManagerEnable && g_bAfkManager)
 	{
-		g_bVoteForMap[i][iVote][iMap] = false;
-		if(IsClientInGame(i) && !IsFakeClient(i))
-			iPlayers[iTotal++] = i;
+		for(new i = 1; i <= MaxClients; i++)
+		{
+			g_bVoteForMap[i][iVote][iMap] = false;
+			if(IsClientInGame(i) && !IsFakeClient(i) && !IsAFKClient(i))
+			{
+				iPlayers[iTotal++] = i;
+			}
+		}
 	}
-
+	else
+	{
+		for(new i = 1; i <= MaxClients; i++)
+		{
+			g_bVoteForMap[i][iVote][iMap] = false;
+			if(IsClientInGame(i) && !IsFakeClient(i))
+			{
+				iPlayers[iTotal++] = i;
+			}
+		}
+	}
 	if(g_iVoteMinimum[iVote] > iTotal || iTotal <= 0)
 	{
 		CPrintToChat(iVoter, "%t", "Not Enough Valid Clients");
@@ -1286,8 +1345,16 @@ public Vote_Map(iVote, iVoter, iMap)
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
-	AddMenuItem(hMenu, "Yes", "Yes");
+	if(GetRandomInt(1, 2) == 1)
+	{
+		AddMenuItem(hMenu, "Yes", "Yes");
+		AddMenuItem(hMenu, "No", "No");
+	}
+	else
+	{
 	AddMenuItem(hMenu, "No", "No");
+	AddMenuItem(hMenu, "Yes", "Yes");
+	}
 
 	g_iCurrentVoteIndex = iVote;
 	g_iCurrentVoteMap = iMap;
@@ -1433,6 +1500,7 @@ public Menu_ListVote(iVote, iVoter)
 	{
 		if (IsClientInGame(i) && g_bKzTimer)
 		{
+			KZTimer_StopUpdatingOfClimbersMenu(i);
 		}
 	}
 
@@ -1531,13 +1599,28 @@ public Vote_List(iVote, iVoter, iOption)
 	new iPlayers[MAXPLAYERS + 1];
 	new iTotal;
 
-	for(new i = 1; i <= MaxClients; i++)
+	if (bAfkManagerEnable && g_bAfkManager)
 	{
-		g_bVoteForOption[i][iVote][iOption] = false;
-		if(IsClientInGame(i) && !IsFakeClient(i))
-			iPlayers[iTotal++] = i;
+		for(new i = 1; i <= MaxClients; i++)
+		{
+			g_bVoteForOption[i][iVote][iOption] = false;
+			if(IsClientInGame(i) && !IsFakeClient(i) && !IsAFKClient(i))
+			{
+				iPlayers[iTotal++] = i;
+			}
+		}
 	}
-
+	else
+	{
+		for(new i = 1; i <= MaxClients; i++)
+		{
+			g_bVoteForOption[i][iVote][iOption] = false;
+			if(IsClientInGame(i) && !IsFakeClient(i))
+			{
+				iPlayers[iTotal++] = i;
+			}
+		}
+	}
 	if(g_iVoteMinimum[iVote] > iTotal || iTotal <= 0)
 	{
 		CPrintToChat(iVoter, "%t", "Not Enough Valid Clients");
@@ -1608,8 +1691,16 @@ public Vote_List(iVote, iVoter, iOption)
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
-	AddMenuItem(hMenu, "Yes", "Yes");
+	if(GetRandomInt(1, 2) == 1)
+	{
+		AddMenuItem(hMenu, "Yes", "Yes");
+		AddMenuItem(hMenu, "No", "No");
+	}
+	else
+	{
 	AddMenuItem(hMenu, "No", "No");
+	AddMenuItem(hMenu, "Yes", "Yes");
+	}
 
 	g_iCurrentVoteIndex = iVote;
 	g_iCurrentVoteOption = iOption;
@@ -1782,14 +1873,29 @@ public Vote_Simple(iVote, iVoter)
 
 	new iPlayers[MAXPLAYERS + 1];
 	new iTotal;
-
-	for(new i = 1; i <= MaxClients; i++)
+	
+	if (bAfkManagerEnable && g_bAfkManager)
 	{
-		g_bVoteForSimple[i][iVote] = false;
-		if(IsClientInGame(i) && !IsFakeClient(i))
-			iPlayers[iTotal++] = i;
+		for(new i = 1; i <= MaxClients; i++)
+		{
+			g_bVoteForSimple[i][iVote] = false;
+			if(IsClientInGame(i) && !IsFakeClient(i) && !IsAFKClient(i))
+			{
+				iPlayers[iTotal++] = i;
+			}
+		}
 	}
-
+	else
+	{
+		for(new i = 1; i <= MaxClients; i++)
+		{
+			g_bVoteForSimple[i][iVote] = false;	
+			if(IsClientInGame(i) && !IsFakeClient(i))
+			{
+				iPlayers[iTotal++] = i;
+			}
+		}
+	}
 	if(g_iVoteMinimum[iVote] > iTotal || iTotal <= 0)
 	{
 		CPrintToChat(iVoter, "%t", "Not Enough Valid Clients");
@@ -1865,8 +1971,16 @@ public Vote_Simple(iVote, iVoter)
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
 	AddMenuItem(hMenu, "", " ", ITEMDRAW_NOTEXT);
-	AddMenuItem(hMenu, "Yes", "Yes");
+	if(GetRandomInt(1, 2) == 1)
+	{
+		AddMenuItem(hMenu, "Yes", "Yes");
+		AddMenuItem(hMenu, "No", "No");
+	}
+	else
+	{
 	AddMenuItem(hMenu, "No", "No");
+	AddMenuItem(hMenu, "Yes", "Yes");
+	}
 
 	g_iCurrentVoteIndex = iVote;
 	VoteMenu(hMenu, iPlayers, iTotal, 30);
@@ -2650,7 +2764,12 @@ stock bool:IsValidClient(iClient)
 		return false;
 	return true;
 }
-
+stock bool:IsAFKClient(iClient)
+{
+	if(AFKM_GetClientAFKTime(iClient) >= iAfkTime)
+		return true;
+	return false;
+ }
 stock FormatVoterString(iVote, iVoter, String:strBuffer[], iBufferSize)
 {
 	decl String:strVoter[MAX_NAME_LENGTH];

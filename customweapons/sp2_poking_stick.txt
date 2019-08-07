@@ -1,0 +1,30 @@
+"The Poking Stick"
+{
+	"classes"
+	{
+		"spy"	"2"
+	}
+	"baseclass"		"bat"
+	"baseindex"		"572"
+	"logname"		"poking_stick"
+	"steamids"		"STEAM_0:1:16442933"
+	"description"	"-From Advanced Weaponiser 2-\n \n+100% melee range\nOn Kill: One second of 100% critical chance\n-100% fire rate penalty"
+	"attributes"
+	{
+		"melee range multiplier"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"2.0"
+		}
+		"critboost on kill"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"fire rate penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"2.0"
+		}
+	}
+}

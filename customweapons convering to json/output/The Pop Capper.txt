@@ -1,0 +1,21 @@
+"The Pop Capper"
+{
+"classes"       {
+"scout"       "1"
+}
+ "baseclass"       "pistol"
+ "baseindex"       "294"
+ "logname"       "pop_capper"
+ "steamids"       "girl"
+ "description"       "Alt-fire       25 self-damage to incur a buff for 3 sec\nNo random critical hits"
+ "attributes"       {
+"addcond on hp sacrifice"       {
+"plugin"       "moreaw2"
+ "value"       "-25 cond 3.0"
+}
+ "crit mod disabled"       {
+"plugin"       "tf2attributes"
+ "value"       "0.0"
+}
+}
+}

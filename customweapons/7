@@ -1,0 +1,56 @@
+"海盗冲锋剑"
+{
+	"classes"
+	{
+		"demoman"	"2"
+	}
+	"baseclass"		"sword"
+	"baseindex"		"172"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"jumpin_jehosaphat"
+	"description"	"当装备时:\n粘单跳跃会暴击自己\n粘单跳跃着陆时:\n会激活冲刺\n激活时能转向\n没有随机暴击\n-15%移动速度\n有大的击中范围和拿出这武器时速度慢"
+	"cw3_attributes"
+	{
+		"provide on active"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.0"
+		}
+		"mod crit while airborne"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"charge on explosive jump land"
+		{
+			"plugin"	"aw2attrib"
+			"value"		"10"
+		}
+		"mult charge turn control"
+		{
+			"plugin"	"tf2attributes"
+			"value" 	"10001"
+		}
+		"crit mod disabled"
+		{
+			"plugin"	"tf2attributes"
+			"value" 	"0"
+		}
+		"move speed penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.85"
+		}
+		"is_a_sword"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"72"
+		}
+		"weapon_allow_inspect"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+	}
+}

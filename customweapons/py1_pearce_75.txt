@@ -1,0 +1,45 @@
+"The Pearce 75"
+{
+	"classes"
+	{
+		"pyro"	"1"
+	}
+	"baseclass"		"raygun"
+	"baseindex"		"442"
+	"logname"		"pearce75"
+	"steamids"		"chawlz"
+	"description"	"Damage scales up to +80% with time enemy has been burning up to 8 seconds\n-50% damage falloff penalty"
+	"attributes"
+	{
+		"burn time dmg scale" // 1s = 1.1   8s = 1.8   value 2.0 | 1s = 1.2   8s = 2.6
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"1.0"
+		}
+		"dmg falloff increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.5"
+		}
+		"energy weapon no ammo"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"energy weapon penetration"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"energy weapon no hurt building"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"energy weapon no deflect"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+	}
+}

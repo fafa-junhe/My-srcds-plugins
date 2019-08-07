@@ -1,0 +1,21 @@
+"The Stab-n-Away"
+{
+	"classes"
+	{
+		"spy"		"2"
+	}
+    
+	"baseclass"		"knife"
+	"baseindex"		"4"
+	"logname"		"stab_n_away"
+	"description"	"Instant cloak upon backstab"
+    
+	"attributes"
+	{
+		"fastcloak on backstab"
+		{
+			"plugin"	"advanced-weaponiser-2-attributes"
+			"value"		"1"
+		}
+	}
+}

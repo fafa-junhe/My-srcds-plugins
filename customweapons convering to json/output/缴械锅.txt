@@ -1,0 +1,31 @@
+"缴械锅"
+{
+"classes"       {
+"medic"       "2"
+ "scout"       "2"
+ "sniper"       "2"
+ "soldier"       "2"
+ "heavy"       "2"
+ "demoman"       "2"
+ "engineer"       "2"
+ "pyro"       "2"
+}
+ "baseclass"       "saxxy"
+ "baseindex"       "264"
+ "nobots"       "1"
+ "quality"       "6"
+ "logname"       "sad"
+ "description"       "使敌人缴械2秒\n-90%伤害"
+ "cw3_attributes"       {
+"disable slot"       {
+"plugin"       "moreaw2"
+ "value"       "0 2"
+}
+}
+ "attributes"       {
+"damage penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "0.1"
+}
+}
+}

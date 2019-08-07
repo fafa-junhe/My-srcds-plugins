@@ -1,0 +1,30 @@
+"The Iron Spine"
+{
+	"classes"
+	{
+		"sniper"	"1"
+	}
+	"baseclass"		"tf_wearable"
+	"baseindex"		"231"
+	"logname"		"iron_spine"
+	"steamids"		"chawlz"
+	"description"	"-75% damage taken from behind\n-15 max health on wearer\nThis weapon is useable in medieval mode"
+	"attributes"
+	{
+		"dmg taken from behind"
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"0.25"
+		}
+		"allowed in medieval mode"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"max health additive penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"-15"
+		}
+	}
+}

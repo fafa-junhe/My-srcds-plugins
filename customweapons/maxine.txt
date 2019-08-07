@@ -1,0 +1,40 @@
+"Maxine"
+{
+	"classes"
+	{
+		"heavy"		"0"
+	}
+	"baseclass"		"minigun"
+	"baseindex"		"15"
+	"logname"		"maxine"
+	"killicon"		"minigun"
+	"description"	"No move speed penalty while deployed\n10 ammo consumed per second while deployed\n15% slower spin up time\n-25% damage penalty\nNo ammo from dispensers while active"
+	"attributes"
+	{
+		"aiming movespeed increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.5"
+		}
+        "uses ammo while aiming"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"10"
+		}
+        "minigun spinup time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.15"
+		}
+        "damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+        "no primary ammo from dispensers while active"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+	}
+}

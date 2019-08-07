@@ -1,0 +1,30 @@
+"寄生者"
+{
+"classes"       {
+"spy"       "1"
+}
+ "baseclass"       "builder"
+ "baseindex"       "735"
+ "nobots"       "1"
+ "quality"       "6"
+ "logname"       "transmission"
+ "description"       "放在建筑上时玩家每秒回4血\n电子工兵+50%血\n电子工兵伤害-75%"
+ "attributes"       {
+"sapper damage leaches health"       {
+"plugin"       "tf2attributes"
+ "value"       "4"
+}
+ "sapper health bonus"       {
+"plugin"       "tf2attributes"
+ "value"       "1.5"
+}
+ "sapper damage penalty"       {
+"plugin"       "tf2attributes"
+ "value"       ".75"
+}
+ "weapon_allow_inspect"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+}
+}

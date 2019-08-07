@@ -1,0 +1,52 @@
+"Brookline Reaper"
+{
+	"classes"
+	{
+		"scout"		"0"
+	}
+	"baseclass"		"scattergun"
+	"baseindex"		"15002"
+	"mag"			"6"
+	"ammo"			"32"
+	"logname"		"breaper"
+	"killicon"		"scattergun"
+	"description"	"0.4% to oneshot the target, True Strike, 50% evasion, -50% Damage, 250% Damage returns back to attacker, Each miss decreases fire rate by 25% (max 200%)"
+	"attributes"
+	{
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.5"
+		}
+		"miss decreases fire rate"
+		{
+			"plugin"	"moreaw2"
+			"value"		"0.25 8 0.0 1.0"
+		}
+		"chance to oneshot"
+		{
+			"plugin"	"orion"
+			"value"		"0.004"
+		}
+		"evasion"
+		{
+			"plugin"	"dota2"
+			"value"		"0.5"
+		}
+		"true strike"
+		{
+			"plugin"	"dota2"
+			"value"		"1"
+		}
+		"on hurt dmg attacker"
+		{
+			"plugin"	"dota2"
+			"value"		"2.5"
+		}
+		"set_item_texture_wear"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0"
+		}
+	}
+}

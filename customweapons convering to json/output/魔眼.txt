@@ -1,0 +1,27 @@
+"魔眼"
+{
+"classes"       {
+"sniper"       "0"
+}
+ "baseclass"       "sniperrifle"
+ "baseindex"       "1"
+ "description"       "会产生弹头轨迹 \nminicrit变crit\n 瞄准时不会减慢速度 \n+50充能速度 \n着火时会获得更多的伤害"
+ "attributes"       {
+"sniper fires tracer"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+ "SRifle Charge rate increased"       {
+"plugin"       "tf2attributes"
+ "value"       "1.5"
+}
+ "minicrits become crits"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+ "dmg taken from fire increased"       {
+"plugin"       "tf2attributes"
+ "value"       "1.5"
+}
+}
+}

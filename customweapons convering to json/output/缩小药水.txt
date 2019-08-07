@@ -1,0 +1,21 @@
+"缩小药水"
+{
+"classes"       {
+"scout"       "1"
+}
+ "baseclass"       "lunchbox_drink"
+ "baseindex"       "163"
+ "nobots"       "1"
+ "quality"       "6"
+ "logname"       "sad"
+ "description"       "缩小到50%\n打上死亡标记\n获得移动速度加成10秒\n有30秒冷却"
+ "cw3_attributes"       {
+"minimann attr"       {
+"plugin"       "moreaw2"
+ "value"       "0.5 10 30 2 1"
+}
+}
+ "attributes"       {
+
+}
+}

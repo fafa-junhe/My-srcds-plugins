@@ -1,0 +1,33 @@
+"The Clever Girl"
+{
+"classes"       {
+"sniper"       "0"
+}
+ "baseclass"       "sniperrifle"
+ "baseindex"       "14"
+ "logname"       "clever_girl"
+ "steamids"       "Abe"
+ "description"       "Critical kills are silent\nWhile Scoped       Become invisible at 50% power charge\nTaking伤害disrupts the cloak\n-30%伤害penalty\n-50% move speed while aiming\nNo headshots when not fully charged\n"
+ "attributes"       {
+"crits are silent kill"       {
+"plugin"       "chdata-attributes"
+ "value"       "1"
+}
+ "stealth at srifle charge amt"       {
+"plugin"       "chdata-attributes"
+ "value"       "75.0"
+}
+ "damage penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "0.7"
+}
+ "aiming movespeed decreased"       {
+"plugin"       "tf2attributes"
+ "value"       "1.5"
+}
+ "sniper no headshot without full charge"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+}
+}

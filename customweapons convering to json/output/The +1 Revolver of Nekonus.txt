@@ -1,0 +1,20 @@
+"The +1 Revolver of Nekonus"
+{
+"classes"       {
+"spy"       "0"
+}
+ "baseclass"       "revolver"
+ "baseindex"       "24"
+ "logname"       "nekonus_revolver"
+ "description"       "On Hit       Speedboost for 5 seconds\nOn Miss       Piss yourself"
+ "attributes"       {
+"add tfcond on miss"       {
+"plugin"       "chdata-attributes"
+ "value"       "iCond 0.25saftermissed 5.0secs"
+}
+ "speed_boost_on_hit"       {
+"plugin"       "tf2attributes"
+ "value"       "5"
+}
+}
+}

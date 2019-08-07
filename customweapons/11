@@ -1,0 +1,29 @@
+"命运之弩"
+{
+	"classes"
+	{
+		"medic"	"0"
+	}
+	"baseclass"			"crossbow"
+	"baseindex"		"305"
+	"nobots"		"1"
+	"quality"		"6"
+	"logname"		"sad"
+	"description"		"+随机伤害(-75% - 100%伤害)\n装弹速度+200%"
+	"cw3_attributes"
+    {
+        "random dmg"
+        {
+            "plugin"   "orion"
+            "value"     "0.25 2"
+        }
+    }
+    "attributes"
+    {
+        "Reload time penalty"
+        {
+            "plugin"    "tf2attributes"
+            "value" "3"
+        }
+    }
+}

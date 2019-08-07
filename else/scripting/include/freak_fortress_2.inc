@@ -2,6 +2,20 @@
 #include <morecolors>
 #include <sdktools>
 
+enum PercentDamageType
+{
+  Percent_None=0,
+  Percent_Goomba,
+  Percent_Backstab,
+  Percent_Marketed,
+  Percent_Ullapool,
+  Percent_Facestab,
+  Percent_GroundMarketed
+};
+
+#define SOUNDEXCEPT_MUSIC 0
+#define SOUNDEXCEPT_VOICE 1
+
 #define FF2FLAG_UBERREADY				(1<<1)		//Used when medic says "I'm charged!"
 #define FF2FLAG_ISBUFFED				(1<<2)		//Used when soldier uses the Battalion's Backup
 #define FF2FLAG_CLASSTIMERDISABLED 		(1<<3)		//Used to prevent clients' timer
@@ -16,8 +30,25 @@
 #define FF2FLAG_CHANGECVAR				(1<<12)		//Used to prevent SMAC from kicking bosses who are using certain rages (NYI)
 #define FF2FLAG_ALLOW_HEALTH_PICKUPS	(1<<13)		//Used to prevent bosses from picking up health
 #define FF2FLAG_ALLOW_AMMO_PICKUPS		(1<<14)		//Used to prevent bosses from picking up ammo
-#define FF2FLAG_ROCKET_JUMPING			(1<<15)		//Used when a soldier is rocket jumping
+// #define FF2FLAG_ROCKET_JUMPING			(1<<15)		//Used when a soldier is rocket jumping
+#define FF2FLAG_NOTALLOW_RAGE       (1<<15)
+
+// 소스모드의 'int'는 16비트로 추정됨.
+// #define FF2FLAG_ALLOW_FACESTAB       (1<<17)
+// #define FF2FLAG_ALLOW_GROUNDMARKET       (1<<18)
 #define FF2FLAGS_SPAWN					~FF2FLAG_UBERREADY & ~FF2FLAG_ISBUFFED & ~FF2FLAG_TALKING & ~FF2FLAG_ALLOWSPAWNINBOSSTEAM & ~FF2FLAG_CHANGECVAR & ~FF2FLAG_ROCKET_JUMPING & FF2FLAG_USEBOSSTIMER & FF2FLAG_USINGABILITY
+
+#define FF2SERVERFLAG_UNCHANGE_BGM_SERVER (1<<1)
+#define FF2SERVERFLAG_UNCHANGE_BGM_USER (1<<2)
+#define FF2SERVERFLAG_UNCHANGE_BOSSBGM_USER (1<<3)
+#define FF2SERVERFLAG_UNCHANGE_BOSSBGM_SERVER (1<<4)
+#define FF2SERVERFLAG_ISLASTMAN (1<<5)
+#define FF2SERVERFLAG_UNCOLLECTABLE_DAMAGE (1<<6)
+
+#define FF2USERFLAG_ALLOW_FACESTAB (1<<1)
+#define FF2USERFLAG_ALLOW_GROUNDMARKET (1<<2)
+#define FF2USERFLAG_ALLOW_MINIBOMB (1<<3)
+#define FF2USERFLAG_NOTALLOW_MINIBOMB (1<<4)
 
 #if defined _FF2_included
  #endinput
@@ -219,7 +250,7 @@ native Float:FF2_GetRageDist(boss=0, const String:pluginName[]="", const String:
  * @param abilityName 	Name of ability
  * @return				True if the boss has this ability, false if it doesn't
  */
-native bool:FF2_HasAbility(boss, const String:pluginName[], const String:abilityName[]);
+native bool:FF2_HasAbility(boss, const String:pluginName[], const String:abilityName[], bool IsUpgradeRage = false);
 
 /**
  * Determines how the Boss should use a certain ability
@@ -389,6 +420,65 @@ native FF2_GetBossPlayers();
 native bool:FF2_Debug();
 
 /**
+* 서버 플래그 확인.
+* @return 서버 플래그들.
+*
+*/
+
+native FF2_GetServerFlags();
+
+/**
+* 서버 플래그 설정.
+* @param flags 설정할 플래그를 설정.
+* @noreturn
+**/
+native FF2_SetServerFlags(flags);
+
+/*
+* 해당 보스의 능력 지속시간 구하는 함수.
+* @param boss Boss's index
+* @return 보스의 능력 지속시간을 줌.
+*/
+native Float:FF2_GetAbilityDuration(boss, slot=0);
+
+/*
+* 해당보스의 능력 지속시간시간을 설정
+*  @param boss Boss's index
+*  @param time 설정할 시간
+*  @noreturn
+*/
+native FF2_SetAbilityDuration(boss, Float:time, slot=0);
+
+/*
+* 해당 보스의 능력 쿨타임을 구함.
+* @param Boss's Index
+* @return 쿨타임
+*/
+native Float:FF2_GetAbilityCooldown(boss, slot=0);
+
+/*
+* 해당 보스의 능력 쿨타임 설정.
+* @param boss Boss's Index
+* @param time 설정할 시간.
+* @noreturn
+*/
+native FF2_SetAbilityCooldown(boss, Float:time, slot=0);
+
+native FF2_LoadMusicData(Handle:Kv);
+
+native FF2_SetClientDamage(int client, int damage);
+
+native FF2_GetFF2Userflags(int client);
+
+native FF2_SetFF2Userflags(int client, int flags);
+
+native Float:FF2_GetBossMaxRageCharge(int boss);
+
+native FF2_SetBossMaxRageCharge(int boss, float maxCharge);
+
+native void FF2_MakeClientToBoss(int client, int boss);
+
+/**
  * FF2_ONABILITY IS KNOWN TO BE BUGGED AND WILL NOT BE FIXED TO PRESERVE BACKWARDS COMPATABILITY.  DO NOT USE IT.
  * Called when a Boss uses an ability (Rage, jump, teleport, etc)
  * Called every 0.2 seconds for charge abilities
@@ -425,7 +515,7 @@ forward Action:FF2_OnTriggerHurt(boss, triggerHurt, &Float:damage);
  * @param time			Length of music
  * @return				Plugin_Stop will prevent music, Plugin_Changed will change it.
  */
-forward Action:FF2_OnMusic(String:path[], &Float:time);
+forward Action:FF2_OnMusic(String:path[PLATFORM_MAX_PATH], &Float:time, &Float:volume, String:artist[80], String:name[100], &bool:notice, client, selected);
 
 
 /**
@@ -475,6 +565,19 @@ forward Action:FF2_OnLoseLife(boss, &lives, maxLives);
  * @noreturn
  */
 forward Action:FF2_OnAlivePlayersChanged(players, bosses);
+
+forward Action:FF2_OnBossAbilityTime(boss, String:abilityName[], slot, &Float:abilityDuration, &Float:abilityCooldown);
+
+forward Action:FF2_OnAbilityTimeEnd(boss, slot);
+
+forward Action:FF2_OnPlayBoss(int client, int bossIndex);
+
+
+forward Action:FF2_OnTakePercentDamage(int victim, int &attacker, PercentDamageType:damageType, float &damage);
+
+// 굼바는 무조건 이쪽으로만.
+forward void FF2_OnTakePercentDamage_Post(int victim, int attacker, PercentDamageType:damageType, float damage);
+
 
 /**
  *
@@ -609,6 +712,7 @@ public __pl_FF2_SetNTVOptional()
 	MarkNativeAsOptional("FF2_GetBossRageDamage");
 	MarkNativeAsOptional("FF2_SetBossRageDamage");
 	MarkNativeAsOptional("FF2_GetClientDamage");
+    MarkNativeAsOptional("FF2_SetClientDamage");
 	MarkNativeAsOptional("FF2_GetRoundState");
 	MarkNativeAsOptional("FF2_GetRageDist");
 	MarkNativeAsOptional("FF2_HasAbility");
@@ -629,5 +733,7 @@ public __pl_FF2_SetNTVOptional()
 	MarkNativeAsOptional("FF2_GetAlivePlayers");
 	MarkNativeAsOptional("FF2_GetBossPlayers");
 	MarkNativeAsOptional("FF2_Debug");
+  MarkNativeAsOptional("FF2_GetServerFlags");
+  MarkNativeAsOptional("FF2_SetServerFlags");
 }
 #endif

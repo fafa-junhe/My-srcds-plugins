@@ -1,0 +1,25 @@
+"The Instant Iaido"
+{
+"classes"       {
+"sniper"       "2"
+}
+ "baseclass"       "club"
+ "baseindex"       "357"
+ "logname"       "instant_iaido"
+ "steamids"       "girl"
+ "description"       "On Draw       Deal and take minicrits for 1.5 seconds\n-20% slower firing speed\n+20%伤害from melee sources while active"
+ "attributes"       {
+"ondraw addcond"       {
+"plugin"       "chdata-attributes"
+ "value"       "condmarkfordeath 1.5"
+}
+ "fire rate penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "1.2"
+}
+ "dmg from melee increased"       {
+"plugin"       "tf2attributes"
+ "value"       "1.2"
+}
+}
+}

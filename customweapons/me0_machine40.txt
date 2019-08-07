@@ -1,0 +1,36 @@
+"Maniac's Maschinenpistole"
+{
+	"classes"
+	{
+		"medic"		"0"
+	}
+	"baseclass"		"syringegun_medic"
+	"baseindex"		"412"
+	"mag"			"50"
+	"ammo"			"150"
+	"logname"		"machine40"
+	"description"	"(+) On hit: +5% Faster healing speed\n(+) This effect will stack until you reach 100% bonus healing rate\n(+) +25% Larger clip size\n \n(-) 25% Damage penalty\n(-) While healing: Bonus healing rate will slowly decay"
+	"attributes"
+	{
+		"clip size bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.25"
+		}
+		"hits increase healing rate"
+		{
+			"plugin"	"zethax-attributes"
+			"value"		"0.05 20 1"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+		"projectile spread angle penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+	}
+}

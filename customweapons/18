@@ -1,0 +1,48 @@
+"火龙步枪"
+{
+	"classes"
+	{
+		"pyro"		"1"
+	}
+	"baseclass"		"shotgun"
+	"baseindex"		"1"
+	"mag"			"6"
+	"ammo"			"32"
+	"description"	"-30%装弹速度\n攻击着火敌人+300%伤害\n-50%伤害"
+	"attributes"
+	{
+		"Reload time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.3"
+		}
+		"Set DamageType Ignite"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.0"
+		}
+		"weapon burn dmg increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"3.0"
+		}
+		"weapon burn time reduced"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.5"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.5"
+		}
+	}
+	"viewmodel"
+	{
+		"modelname"		"models/weapons/c_models/c_calefactor/c_calefactor.mdl"
+	}
+	"worldmodel"
+	{
+		"modelname"		"models/weapons/c_models/c_calefactor/c_calefactor.mdl"
+	}
+}

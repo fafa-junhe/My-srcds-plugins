@@ -1,0 +1,36 @@
+"The Matador"
+{
+	"classes"
+	{
+		"soldier"		"0"
+	}
+	"baseclass"		"rocketlauncher"
+	"baseindex"		"18"
+	"nobots"		"1"
+	"logname"		"matador"
+	"killicon"		"tf_projectile_rocket"
+	"description"	"Projectiles are controllable\nOn hit: 100.0 vertical push force (working on it :P)\n-20% slower firing speed\n-30% explosion radius"
+	"attributes"
+	{
+		"controllable projectiles"
+		{
+			"plugin"	"advanced-weaponiser-2-attributes"
+			"value"		"0.25"
+		}
+		"apply z velocity on damage"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"2.0"
+		}
+		"fire rate penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.2"
+		}
+		"Blast radius decreased"
+		{
+			"plugin"	"tf2attributes"
+			"value"	"0.7"
+		}
+	}
+}

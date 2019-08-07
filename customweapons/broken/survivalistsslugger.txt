@@ -1,0 +1,45 @@
+"The Survivalist's Slugger"
+{
+	"classes"
+	{
+		"soldier"	"1"
+	}
+	"baseclass"		"shotgun"
+	"baseindex"		"10"
+	"mag"			"0"
+	"logname"		"survivalists_slugger"
+	"description"	"Every 50 damage with your other weapons\nreloads a shot for this weapon,\nup to 12 rounds\n+15% faster firing speed\n+20% bullets per shot\n20% less accurate\nWeapon starts with empty clip\nNo manual reload"
+	"attributes"
+	{
+		"reload clip on damage"
+		{
+			"plugin"	"advanced-weaponiser-2-attributes"
+			"value"		"12"
+		}
+		"fire rate bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.85"
+		}
+		"bullets per shot bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.2"
+		}
+        "clip size bonus"
+        {
+            "plugin"	"tf2attributes"
+			"value"		"2"
+        }
+        "spread penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.2"
+		}
+        "no reloading"
+		{
+			"plugin"	"advanced-weaponiser-2-attributes"
+			"value"		"1"
+		}
+	}
+}

@@ -1,0 +1,21 @@
+"Run Jump And Die"
+{
+"classes"       {
+"spy"       "0"
+}
+ "baseclass"       "revolver"
+ "baseindex"       "24"
+ "logname"       "run_jump_die"
+ "steamids"       "girl"
+ "description"       "While on fire       Receive a speedboost\n-10 max health on wearer"
+ "attributes"       {
+"onfire speedboost"       {
+"plugin"       "chdata-attributes"
+ "value"       "45.0"
+}
+ "max health additive penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "-10"
+}
+}
+}

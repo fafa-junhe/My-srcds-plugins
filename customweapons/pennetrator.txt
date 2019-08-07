@@ -1,0 +1,41 @@
+"灌肠弓" // Weapon name.
+{
+	"classes"
+	{
+		"sniper"	"0" // Class and slot equipping the weapon.
+	}
+	"baseclass"		"compound_bow" // The base class. This uses the Huntsman as a base.
+	"baseindex"		"56" // Weapon index for base model and sounds.
+	"nobots"		"1" // Whether or not bots can equip it.
+	"quality"		"6" // Quality of the weapon, this one is unique.
+	"logname"		"penetrator" // What prints in the log when someone is killed by this weapon.
+	"description"	"箭最多能弹射两次 能穿透敌人\n射箭的时候-50%\n速度-25%射击速度" // Description.
+	"cw3_attributes" // Attribute block
+	{
+		"projectiles bounce" // Attribute name.
+		{
+			"plugin"	"advanced-weaponiser-2-attributes" // Plugin the attribute is from.
+			"value"		"2" // Attribute value.
+		}
+		"projectile penetration" // Attribute name.
+		{
+			"plugin"	"tf2attributes" // Plugin the attribute is from.
+			"value"		"1" // Attribute value.
+		}
+		"fire rate penalty" // Attribute name.
+		{
+			"plugin"	"tf2attributes" // Plugin the attribute is from.
+			"value"		"1.25" // Attribute value.
+		}
+		"sniper aiming movespeed decreased" // Attribute name.
+		{
+			"plugin"	"tf2attributes" // Plugin the attribute is from.
+			"value"		".5" // Attribute value.
+		}
+		"weapon_allow_inspect" // Attribute name.
+		{
+			"plugin"	"tf2attributes" // Plugin the attribute is from.
+			"value"		"1" // Attribute value.
+		}
+	}
+}

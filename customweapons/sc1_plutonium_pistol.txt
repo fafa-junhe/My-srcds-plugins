@@ -1,0 +1,44 @@
+"The Plutonium Pistol"
+{
+	"classes"
+	{
+		"scout"		"1"
+	}
+	"baseclass"		"handgun_scout_secondary"
+	"baseindex"		"449"
+	"logname"		"plutonium_pistol"
+	"description"	"On 3 hits without missing: Marks the target for 10 sec, allowing them to be seen through walls\n+25% faster firing speed\n25% more accurate\n-50% clip size\n-20% damage penalty\nNo random critical hits"
+	"attributes"
+	{
+		"meet the scout combo"
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"3 10.0"
+		}
+		"fire rate bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+		"weapon spread bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+		"clip size penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.5"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.8"
+		}
+		"crit mod disabled"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.0"
+		}
+	}
+}

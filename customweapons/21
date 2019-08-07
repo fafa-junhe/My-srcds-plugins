@@ -1,0 +1,66 @@
+"The Drunkard's Wrath"
+{
+	"classes"
+	{
+		"demoman"		"0"
+	}
+	"baseclass"		"grenadelauncher"
+	"baseindex"		"19"
+	"mag"			"6"
+	"ammo"			"16"
+	"logname"		"drunkard_wrath"
+	"description"	"(+) 50% Larger clip size\n(+) Press your Special Attack key to switch Firing Modes\n(+) Hammer Firing increases firing speed,\ndecreases movement speed and reduces switching speed\nTrigger Firing is the normal firing type\n(+) This weapon deploys and holsters 25% faster\n(+) 25% Increased projectile speed\n \n(-) 60% Smaller blast radius\n(-) 25% Damage penalty\n(-) Grenades shatter on contact with surfaces"
+	"attributes"
+	{
+		"provide on active"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+		"clip size bonus"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.5"
+		}
+		"hammer mechanic"
+		{
+			"plugin"	"zethax-attributes"
+			"value"		"1"
+		}
+		"Projectile speed increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.25"
+		}
+		"single wep deploy time decreased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+		"single wep holster time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+		"Blast radius decreased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.4"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+		"sticky air burst mode"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"2"
+		}
+		"grenade no spin"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1"
+		}
+	}
+}

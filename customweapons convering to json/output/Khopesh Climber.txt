@@ -1,0 +1,21 @@
+"Khopesh Climber"
+{
+"classes"       {
+"sniper"       "2"
+}
+ "baseclass"       "club"
+ "baseindex"       "171"
+ "logname"       "khopesh_climber"
+ "killicon"       "club"
+ "description"       "On Hit (Walls)       Climb!"
+ "attributes"       {
+"climb walls"       {
+"plugin"       "cw2_khopesh"
+ "value"       "1"
+}
+ "fire rate penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "1.95"
+}
+}
+}

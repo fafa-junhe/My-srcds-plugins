@@ -1,0 +1,37 @@
+"The Provisioner"
+{
+"classes"       {
+"heavy"       "0"
+}
+ "baseclass"       "minigun"
+ "baseindex"       "41"
+ "ammo"       "200"
+ "logname"       "provisions"
+ "description"       "(+) While spun up you and nearby allies will gain 12 hp per sec\n and allies receive 20% of their offhand ammo per sec\n(+) Kills increase the effectiveness of this effect by 50% for 5 seconds\n(+) Dispensing Fury       Through healing allies you build up a       Fury       meter\n(+) When       Fury       is charged activate to double the dispensing radius and effectiveness\nfor 10 seconds\n \n(-) 33%伤害penalty\n(-) 25% Less health received from other healing sources on wearer"
+ "attributes"       {
+"dispenser minigun main"       {
+"plugin"       "zethax-attributes"
+ "value"       "1 350 5.0 10.0 0.25 150"
+}
+ "dispenser minigun heal"       {
+"plugin"       "zethax-attributes"
+ "value"       "0.08333"
+}
+ "dispenser minigun ammo"       {
+"plugin"       "zethax-attributes"
+ "value"       "1.0 0.2"
+}
+ "damage penalty"       {
+"plugin"       "tf2attributes"
+ "value"       "0.67"
+}
+ "health from packs decreased"       {
+"plugin"       "tf2attributes"
+ "value"       "0.75"
+}
+ "health from healers reduced"       {
+"plugin"       "tf2attributes"
+ "value"       "0.75"
+}
+}
+}

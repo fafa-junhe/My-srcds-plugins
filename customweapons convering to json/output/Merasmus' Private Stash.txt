@@ -1,0 +1,30 @@
+"Merasmus' Private Stash"
+{
+"classes"       {
+"soldier"       "1"
+}
+ "baseclass"       "buff_item"
+ "baseindex"       "129"
+ "nobots"       "1"
+ "quality"       "6"
+ "logname"       "private_stash"
+ "description"       "Rage provides 100% critical chance on nearby teammates and marks them for death.\nRequires 1200伤害to fill."
+ "cw3_attributes"       {
+"banner rage fill multiplier"       {
+"plugin"       "custom-attribute-adapter/attr_rage_meter_mult"
+ "value"       "0.5"
+}
+ "increase buff duration HIDDEN"       {
+"plugin"       "tf2attributes"
+ "value"       "0.5"
+}
+ "custom soldier buff type"       {
+"plugin"       "custom-attribute-adapter/attr_buff_override"
+ "value"       "666"
+}
+ "mod soldier buff type"       {
+"plugin"       "tf2attributes"
+ "value"       "1"
+}
+}
+}

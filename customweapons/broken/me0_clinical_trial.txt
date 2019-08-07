@@ -1,0 +1,60 @@
+"The Clinical Trial"
+{
+	"classes"
+	{
+		"medic"		"0"
+	}
+	"baseclass"		"syringegun_medic"
+	"baseindex"		"412"
+	"logname"		"clinical_trial"
+	"steamids"		"gage"
+	"description"	"On Alt-Fire: Spend 80% Uber to gain crits for 4 seconds\n15% increased critical damage\n-60% max primary ammo on wearer\n+45% Reload time\n+35% slower firing speed\n-25% damage penalty\n-50% clip size\n10% slower weapon switch\nNo random critical hits"
+	"attributes"
+	{
+		"spend uber for tfcond"
+		{
+			"plugin"	"chdata-attributes"
+			"value"		"0.8 iCond 4.0s"
+		}
+		"crit damage multiplier"
+		{
+			"plugin"	"basic-attributes"
+			"value"		"1.15"
+		}
+		"maxammo primary reduced"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.4"
+		}
+		"Reload time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.45"
+		}
+		"fire rate penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.35"
+		}
+		"damage penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.75"
+		}
+		"clip size penalty"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.5"
+		}
+		"deploy time increased"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"1.1"
+		}
+		"crit mod disabled"
+		{
+			"plugin"	"tf2attributes"
+			"value"		"0.0"
+		}
+	}
+}
